@@ -7,7 +7,6 @@ if (isset($_POST['btn_add'])) {
     $txt_address = $_POST['txt_address'];
     $txt_sterm = $_POST['txt_sterm'];
     $txt_eterm = $_POST['txt_eterm'];
-    $txt_status = "Start Term";
 
     if (isset($_SESSION['role'])) {
         $action = 'Added Official named ' . $txt_cname;

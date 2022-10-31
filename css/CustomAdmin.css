@@ -15,3 +15,8 @@ aside section.sidebar .user-panel .image > img {
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
   background-color: #333;
 }
+
+.modal .modal-content .modal-body .container-fluid {
+  height: 500px;
+  overflow-y: scroll;
+}
