@@ -2,16 +2,20 @@
 
 echo '
 	<aside class="left-side sidebar-offcanvas">
+
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        
-                        <div class="pull-left info" style= margin-top:80px;>
-                            <h4>Hello, ' . $_SESSION['role'] . '</h4>
 
-                        </div>
+                    <div class="user-panel">
+                      <div class="image">
+                        <img src="../../image/Logo.png" class="img-circle" alt="User Image">
+                      </div>
+                      <div class="info">
+                          <h4>Hello, ' . $_SESSION['role'] . '</h4> 
+                      </div>
                     </div>
+
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     ';

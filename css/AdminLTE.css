@@ -1,100 +1,12 @@
-/* open-sans-300 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/open-sans-v13-latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-       url('../fonts/open-sans-v13-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-300italic - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: url('../fonts/open-sans-v13-latin-300italic.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'),
-       url('../fonts/open-sans-v13-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-300italic.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-300italic.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/open-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans'), local('OpenSans'),
-       url('../fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-italic - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/open-sans-v13-latin-italic.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Italic'), local('OpenSans-Italic'),
-       url('../fonts/open-sans-v13-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-italic.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-italic.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-600 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/open-sans-v13-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
-       url('../fonts/open-sans-v13-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-/* open-sans-600italic - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: url('../fonts/open-sans-v13-latin-600italic.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'),
-       url('../fonts/open-sans-v13-latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/open-sans-v13-latin-600italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/open-sans-v13-latin-600italic.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/open-sans-v13-latin-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/open-sans-v13-latin-600italic.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic);
 
-/* kaushan-script-regular - latin */
-@font-face {
-  font-family: 'Kaushan Script';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/kaushan-script-v5-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Kaushan Script'), local('KaushanScript-Regular'),
-       url('../fonts/kaushan-script-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/kaushan-script-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/kaushan-script-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/kaushan-script-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/kaushan-script-v5-latin-regular.svg#KaushanScript') format('svg'); /* Legacy iOS */
-}
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 /*! 
  *   AdminLTE v1.0
  *   Author: AlmsaeedStudio.com
- *   License: Open source - MIT
- *           Please visit http://opensource.org/licenses/MIT for more information
+ *   License: Please visit http://wrapbootstrap.com for information about 
+ *            this theme's license
 !*/
 /*
     Core: General style
@@ -103,8 +15,8 @@
 html,
 body {
   overflow-x: hidden!important;
-  /* font-family: 'Source Sans Pro', sans-serif; */
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
   background: #f9f9f9;
@@ -219,6 +131,7 @@ h6,
 .h5,
 .h6 {
   font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
 }
 /* Page Header */
 .page-header {
@@ -395,7 +308,8 @@ img {
   }
 }
 /* Remove border radius */
-.flat {
+.flat,
+.flat > * {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -486,8 +400,9 @@ body > .header .navbar .nav > li > a:hover > .label {
 }
 body > .header .logo {
   float: left;
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 1.2;
+  /* line-height: 50px; */
   text-align: center;
   padding: 0 10px;
   width: 220px;
@@ -502,6 +417,8 @@ body > .header .logo .icon {
 .right-side > .content-header {
   position: relative;
   padding: 15px 15px 10px 20px;
+  background: #fbfbfb;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .right-side > .content-header > h1 {
   margin: 0;
@@ -592,8 +509,7 @@ body > .header .logo .icon {
 --------------------------
 */
 .sidebar {
- margin-bottom: 5px;
-
+  margin-bottom: 5px;
 }
 .sidebar .sidebar-form input:focus {
   -webkit-box-shadow: none;
@@ -613,7 +529,6 @@ body > .header .logo .icon {
 .sidebar .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
   display: block;
-
 }
 .sidebar .sidebar-menu > li > a > .fa,
 .sidebar .sidebar-menu > li > a > .glyphicon,
@@ -625,7 +540,6 @@ body > .header .logo .icon {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 .sidebar .sidebar-menu .treeview-menu > li {
   margin: 0;
@@ -635,13 +549,11 @@ body > .header .logo .icon {
   display: block;
   font-size: 14px;
   margin: 0px 0px;
-    background-color: #00ff99;
 }
 .sidebar .sidebar-menu .treeview-menu > li > a > .fa,
 .sidebar .sidebar-menu .treeview-menu > li > a > .glyphicon,
 .sidebar .sidebar-menu .treeview-menu > li > a > .ion {
   width: 20px;
-
 }
 .user-panel {
   padding: 10px;
@@ -958,7 +870,7 @@ body > .header .logo .icon {
   margin-left: -10px;
 }
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
-  /*height: 175px;*/
+  height: 175px;
   padding: 10px;
   background: #3c8dbc;
   text-align: center;
@@ -1238,18 +1150,6 @@ body > .header .logo .icon {
 /*
     Component: Small boxes
 */
-span{
-  position: absolute;
-  right: 15px;
-  tranform: translate(0,-50%);
-  top:  50%;
-  cursor: pointer;
-}
-.fa{
-  font-size: 20px;
-  color: white;
-}
-
 .small-box {
   position: relative;
   display: block;
@@ -2531,7 +2431,7 @@ Component: timeline
     -----
 */
 /* 
-    Skin Blue 
+    skin-blue 
     ---------
 */
 /* skin-blue navbar */
@@ -2539,7 +2439,7 @@ Component: timeline
   background-color: #3c8dbc;
 }
 .skin-blue .navbar .nav a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #acd0e5;
 }
 .skin-blue .navbar .nav > li > a:hover,
 .skin-blue .navbar .nav > li > a:active,
@@ -2547,17 +2447,14 @@ Component: timeline
 .skin-blue .navbar .nav .open > a,
 .skin-blue .navbar .nav .open > a:hover,
 .skin-blue .navbar .nav .open > a:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: #307095;
   color: #f6f6f6;
 }
 .skin-blue .navbar .navbar-right > .nav {
   margin-right: 10px;
 }
 .skin-blue .navbar .sidebar-toggle .icon-bar {
-  background: rgba(255, 255, 255, 0.8);
-}
-.skin-blue .navbar .sidebar-toggle:hover .icon-bar {
-  background: #f6f6f6 !important;
+  background: #acd0e5;
 }
 /* skin-blue logo */
 .skin-blue .logo {
@@ -2569,11 +2466,6 @@ Component: timeline
 }
 .skin-blue .logo:hover {
   background: #357ca5;
-}
-/* skin-blue content header */
-.skin-blue .right-side > .content-header {
-  background: #fbfbfb;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 /* Skin-blue user panel */
 .skin-blue .user-panel > .image > img {
@@ -2680,6 +2572,7 @@ Component: timeline
   border-bottom-right-radius: 2px !important;
   border-bottom-left-radius: 0 !important;
 }
+
 /*
     Skin Black
     --------
@@ -2830,6 +2723,7 @@ Component: timeline
   border-bottom-left-radius: 0 !important;
   border-left: 0;
 }
+
 /*!
  * iCheck v1.0.1, http://git.io/arlzeA
  * =================================
@@ -2894,90 +2788,13 @@ Component: timeline
     background-size: 200px 20px;
   }
 }
-.pace .pace-progress {
-  background: #00c0ef;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  height: 2px;
-  -webkit-transition: width 1s;
-  -moz-transition: width 1s;
-  -o-transition: width 1s;
-  transition: width 1s;
-}
-.pace-inactive {
-  display: none;
-}
 
-/*
- * Component: Info Box
- * -------------------
- */
-.info-box {
-  display: block;
-  min-height: 90px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  margin-bottom: 15px;
-}
-.info-box small {
-  font-size: 14px;
-}
-.info-box .progress {
-  background: rgba(0, 0, 0, 0.2);
-  margin: 5px -10px 5px -10px;
-  height: 2px;
-}
-.info-box .progress,
-.info-box .progress .progress-bar {
-  border-radius: 0;
-}
-.info-box .progress .progress-bar {
-  background: #fff;
-}
-.info-box-icon {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  display: block;
-  float: left;
-  height: 90px;
-  width: 90px;
-  text-align: center;
-  font-size: 45px;
-  line-height: 90px;
-  background: rgba(0, 0, 0, 0.2);
-}
-.info-box-icon > img {
-  max-width: 100%;
-}
-.info-box-content {
-  padding: 5px 10px;
-  margin-left: 90px;
-}
-.info-box-number {
-  display: block;
-  font-weight: bold;
-  font-size: 18px;
-}
-.progress-description,
-.info-box-text {
-  display: block;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.info-box-text {
-  text-transform: uppercase;
-}
-.info-box-more {
-  display: block;
-}
-.progress-description {
-  margin: 0;
+
+/*! 
+ * Custom CSS
+ *   
+/*  
+----------------------------------- */
+#table_wrapper #table tbody td button{
+  margin-right: .4em;
 }
