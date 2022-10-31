@@ -24,11 +24,6 @@ if (isset($_POST['btn_add'])) {
             $_SESSION['Added'] = 1;
             header("location: " . $_SERVER['REQUEST_URI']);
         }
-        var_dump($query);
-        echo '<pre>';
-        print_r($_POST);
-        echo '<pre>';
-        exit();
     } else {
         $_SESSION['duplicate'] = 1;
         header("location: " . $_SERVER['REQUEST_URI']);
