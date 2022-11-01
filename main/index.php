@@ -5,13 +5,28 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Remember Bootstrap Template - Index</title>
+  <title>Barangay Information Management System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../landing-page/assets/img/favicon.png" rel="icon">
-  <link href="../landing-page/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="../image/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../image/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../image/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../image/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../image/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../image/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../image/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../image/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../image/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../image/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,13 +41,21 @@
 
   <!-- Template Main CSS File -->
   <link href="../landing-page/assets/css/style.css" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla&family=Poppins:ital,wght@0,100;0,200;0,300;1,400&display=swap" rel="stylesheet">
   <!-- =======================================================
   * Template Name: Remember - v4.9.1
   * Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    html,
+    body {
+      font-family: 'Poppins', sans-serif !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -63,7 +86,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" style="background-image:url(../image/cardona.png);background-position:center;background-size:cover">
     <div class="hero-container" data-aos="fade-up">
       <h1>Welcome to</h1>
       <h1>Brgy. Sampad Cardona Rizal</h1>
@@ -111,6 +134,10 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
 
+
+
+
+
         <div class="section-title" data-aos="zoom-in">
           <h2>Gallery</h2>
           <h3>Check our <span>Gallery</span></h3>
@@ -121,101 +148,98 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../landing-page/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+          <div class="col-md-3 col-sm-6 portfolio-item filter-app">
+            <img src="../image/gallery/a.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Purok 1</h4>
+              <p>>Purok 1</p>
+              <a href="../image/gallery/a.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/a.jpeg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../landing-page/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="col-md-3 col-sm-6 portfolio-item filter-web">
+            <img src="../image/gallery/b.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>>Purok 2</h4>
+              <p>>Purok 2</p>
+              <a href="../image/gallery/b.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/b.jpg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-app">
+            <img src="../image/gallery/c.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>>Purok 3</h4>
+              <p>>Purok 3</p>
+              <a href="../image/gallery/c.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/c.jpeg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-card">
+            <img src="../image/gallery/d.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>>Purok 4</h4>
+              <p>>Purok 4</p>
+              <a href="../image/gallery/d.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/d.jpeg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-web">
+            <img src="../image/gallery/e.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>>Purok 5</h4>
+              <p>>Purok 5</p>
+              <a href="../image/gallery/e.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/e.jpeg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-app">
+            <img src="../image/gallery/f.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Purok 6</h4>
+              <p>Purok 6</p>
+              <a href="../image/gallery/f.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/f.jpeg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-card">
+            <img src="../image/gallery/g.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Purok 7</h4>
+              <p>Purok 7</p>
+              <a href="../image/gallery/g.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/g.png" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-card">
+            <img src="../image/gallery/h.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Purok 8</h4>
+              <p>Purok 8</p>
+              <a href="../image/gallery/h.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/h.jpg" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 portfolio-item filter-web">
+            <img src="../image/gallery/i.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../landing-page/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../landing-page/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../landing-page/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../landing-page/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../landing-page/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../landing-page/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../landing-page/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="../landing-page/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="../image/gallery/i.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
@@ -223,6 +247,8 @@
         </div>
 
       </div>
+
+
     </section><!-- End Portfolio Section -->
 
     <!-- ======= F.A.Q Section ======= -->
@@ -299,17 +325,16 @@
         </div>
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=Sampad%20Barangay%20Hall&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="row mt-5">
-
           <div class="col-lg-4" data-aos="fade-right">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Brarangay Sampad Cardona Rizal</p>
               </div>
 
               <div class="email">
@@ -321,7 +346,7 @@
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>8539-2399</p>
               </div>
 
             </div>
@@ -371,25 +396,14 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-6">
-            <h3>Remember</h3>
+            <h3>Barangay Sampad</h3>
+            <a href="cardonarizal.gov.ph">cardonarizal.gov.ph</a>
             <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
           </div>
         </div>
 
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-
         <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="facebook.com/brgy.sampad" class="facebook"><i class="bx bxl-facebook"></i></a>
         </div>
 
       </div>
