@@ -1,6 +1,6 @@
   <?php
     echo  '<header class="header">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 Brgy. Sampad Information 
                 
             </a>
