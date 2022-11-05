@@ -1,5 +1,5 @@
 <?php echo '<div id="editModal'.$row['id'].'" class="modal fade">
-<form action="function.php" method="post" >
+<form method="post" >
   <div class="modal-dialog modal-sm" style="width:300px !important;">
     <div class="modal-content">
         <div class="modal-header">

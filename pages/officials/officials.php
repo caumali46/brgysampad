@@ -127,6 +127,7 @@
                   </div><!-- /.box-body -->
                 </div><!-- /.box -->
     
+                <?php include "function.php"; ?>
                 <?php include "../duplicate_error.php"; ?>
                 <?php include "../edit_notif.php"; ?>
     
@@ -136,7 +137,6 @@
     
                 <?php include "add_modal.php"; ?>
     
-                <?php include "function.php"; ?>
     
     
               </div> <!-- /.row -->
