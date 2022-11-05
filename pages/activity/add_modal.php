@@ -1,6 +1,6 @@
 <!-- ========================= MODAL ======================= -->
             <div id="addModal" class="modal fade">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" action="function.php">
               <div class="modal-dialog modal-sm" style="width:300px !important;">
                 <div class="modal-content">
                     <div class="modal-header">

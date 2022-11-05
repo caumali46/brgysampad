@@ -1,6 +1,6 @@
 <?php echo '<div id="editModal'.$row['bid'].'" class="modal fade">
 
-<form class="form-horizontal" method="post" >
+<form class="form-horizontal" method="post" action="function.php" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">

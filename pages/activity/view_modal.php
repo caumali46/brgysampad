@@ -1,5 +1,5 @@
 <?php echo '<div id="viewModal'.$row['id'].'" class="modal fade">
-<form method="post"  enctype="multipart/form-data">
+<form method="post"  enctype="multipart/form-data" action="function.php">
   <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">

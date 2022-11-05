@@ -24,7 +24,7 @@
               </h3>
             </div>
             <div class="panel-body">
-              <form role="form" method="post">
+              <form role="form" method="post" action="function.php">
                 <div class="form-group">
                   <label for="txt_username">Username</label>
                   <input type="text" class="form-control" style="border-radius:0px" name="txt_username" placeholder="Enter Username">
