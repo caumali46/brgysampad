@@ -13,19 +13,19 @@ ob_start();
 	<meta content="" name="keywords">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="https://brgysampad.com/image/favicons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="https://brgysampad.com/image/favicons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="https://brgysampad.com/image/favicons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="https://brgysampad.com/image/favicons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="https://brgysampad.com/image/favicons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="https://brgysampad.com/image/favicons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="https://brgysampad.com/image/favicons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="https://brgysampad.com/image/favicons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://brgysampad.com/image/favicons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="https://brgysampad.com/image/favicons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://brgysampad.com/image/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="https://brgysampad.com/image/favicons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://brgysampad.com/image/favicons/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/image/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/image/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/image/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/image/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/image/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/image/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/image/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/image/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/image/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/image/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/image/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/image/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/image/favicons/favicon-16x16.png">
 	<link rel="manifest" href="../image/favicons/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -35,15 +35,15 @@ ob_start();
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
-	<link href="https://brgysampad.com/landing-page/assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="https://brgysampad.com/landing-page/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://brgysampad.com/landing-page/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="https://brgysampad.com/landing-page/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="https://brgysampad.com/landing-page/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="https://brgysampad.com/landing-page/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="/landing-page/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 	<!-- Template Main CSS File -->
-	<link href="https://brgysampad.com/landing-page/assets/css/style.css" rel="stylesheet">
+	<link href="/landing-page/assets/css/style.css" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Remember - v4.9.1
@@ -451,13 +451,13 @@ ob_start();
 	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 	<!-- Vendor JS Files -->
-	<script src="https://brgysampad.com/landing-page/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/aos/aos.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="https://brgysampad.com/landing-page/assets/vendor/php-email-form/validate.js"></script>
+	<script src="/landing-page/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="/landing-page/assets/vendor/aos/aos.js"></script>
+	<script src="/landing-page/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/landing-page/assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="/landing-page/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="/landing-page/assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="/landing-page/assets/vendor/php-email-form/validate.js"></script>
 
 	<!-- Template Main JS File -->
 	<script src="../landing-page/assets/js/main.js"></script>
