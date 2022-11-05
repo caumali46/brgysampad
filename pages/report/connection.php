@@ -1,23 +1,15 @@
 <?php		
-			// Establishing Connection with Server by passing inputs as a parameter
 
+// Establishing Connection with Server by passing inputs as a parameter
 
-
- //$con = mysqli_connect('localhost','root','','db_barangay') or die(mysqli_error());
-
-
+//$con = mysqli_connect('localhost','root','','db_barangay') or die(mysqli_error());
 //  $conn=mysql_connect("localhost","zhyiiynw_admin","p@$$w0rdYPP") or die("Could not connect");
 // mysql_select_db("zhyiiynw_db_barangay",$conn) or die("could not connect database");
-
-
 // 			date_default_timezone_set("Asia/Manila");
 
 $hostname = "localhost";
-
 $username = "zhyiiynw_admin";
-
 $password = 'p@$$w0rdYPP';
-
 $database = "zhyiiynw_db_barangay";
 
 $con = mysqli_connect($hostname, $username, $password, $database) 
@@ -27,15 +19,15 @@ date_default_timezone_set("Asia/Manila");
 
 // Connection Check
 
-if (!$con) {
+// if (!$con) {
 
-    die("Connection failed: " . $con->connect_error);
-} else {
+//     die("Connection failed: " . $con->connect_error);
+// } else {
 
-    echo "Connected Successfully!";
+//     echo "Connected Successfully!";
 
-    // $con->close();
-}
+//     // $con->close();
+// }
 
 
 ?>

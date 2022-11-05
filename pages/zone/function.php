@@ -18,12 +18,14 @@ if(isset($_POST['btn_add'])){
         if($query == true)
         {
             $_SESSION['added'] = 1;
-            header ("location: ".$_SERVER['REQUEST_URI']);
+            // header ("location: ".$_SERVER['REQUEST_URI']);
+            echo "<meta http-equiv='refresh' content='0'>";
         } 
     }
     else{
         $_SESSION['duplicateuser'] = 1;
-        header ("location: ".$_SERVER['REQUEST_URI']);
+        // header ("location: ".$_SERVER['REQUEST_URI']);
+        echo "<meta http-equiv='refresh' content='0'>";
     } 
 }
 
@@ -48,12 +50,14 @@ if(isset($_POST['btn_save']))
 
         if($update_query == true){
             $_SESSION['edited'] = 1;
-            header("location: ".$_SERVER['REQUEST_URI']);
+            // header("location: ".$_SERVER['REQUEST_URI']);
+            echo "<meta http-equiv='refresh' content='0'>";
         }
     }
     else{
         $_SESSION['duplicateuser'] = 1;
-        header ("location: ".$_SERVER['REQUEST_URI']);
+        // header ("location: ".$_SERVER['REQUEST_URI']);
+        echo "<meta http-equiv='refresh' content='0'>";
     } 
 }
 
@@ -68,7 +72,8 @@ if(isset($_POST['btn_delete']))
             if($delete_query == true)
             {
                 $_SESSION['delete'] = 1;
-                header("location: ".$_SERVER['REQUEST_URI']);
+                // header("location: ".$_SERVER['REQUEST_URI']);
+                echo "<meta http-equiv='refresh' content='0'>";
             }
         }
     }
