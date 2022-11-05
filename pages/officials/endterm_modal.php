@@ -1,5 +1,5 @@
 <div id="endModal<?php echo $row['id'];?>" class="modal fade">
-<form method="post" action="function.php">
+<form action="function.php" method="post" >
   <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
