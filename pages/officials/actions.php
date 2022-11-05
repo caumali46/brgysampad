@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['btn_add'])) {
 
     $ddl_pos = $_POST['ddl_pos'];
@@ -21,13 +22,11 @@ if (isset($_POST['btn_add'])) {
         values ('$ddl_pos', '$txt_cname', '$txt_contact', '$txt_address', '$txt_sterm', '$txt_eterm', 'Ongoing Term')") or die('Error: ' . mysqli_error($con));
         if ($query == true) {
             $_SESSION['Added'] = 1;
-            // header("location: " . $_SERVER['REQUEST_URI']);
-            echo "<meta http-equiv='refresh' content='0'>";
+            header("location: " . $_SERVER['REQUEST_URI']);
         }
     } else {
         $_SESSION['duplicate'] = 1;
-        // header("location: " . $_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: " . $_SERVER['REQUEST_URI']);
     }
 }
 
@@ -50,8 +49,7 @@ if (isset($_POST['btn_save'])) {
 
     if ($update_query == true) {
         $_SESSION['edited'] = 1;
-        // header("location: " . $_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: " . $_SERVER['REQUEST_URI']);
     }
 }
 
@@ -63,8 +61,7 @@ if (isset($_POST['btn_end'])) {
 
     if ($end_query == true) {
         $_SESSION['end'] = 1;
-        // header("location: " . $_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: " . $_SERVER['REQUEST_URI']);
     }
 }
 
@@ -76,8 +73,7 @@ if (isset($_POST['btn_start'])) {
 
     if ($start_query == true) {
         $_SESSION['start'] = 1;
-        // header("location: " . $_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: " . $_SERVER['REQUEST_URI']);
     }
 }
 
@@ -88,8 +84,7 @@ if (isset($_POST['btn_delete'])) {
 
             if ($delete_query == true) {
                 $_SESSION['delete'] = 1;
-                // header("location: " . $_SERVER['REQUEST_URI']);
-                echo "<meta http-equiv='refresh' content='0'>";
+                header("location: " . $_SERVER['REQUEST_URI']);
             }
         }
     }
