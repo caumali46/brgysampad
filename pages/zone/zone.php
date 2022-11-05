@@ -1,8 +1,7 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html>
-
-    <?php
-    session_start();
+<html> 
+    <?php 
     if(!isset($_SESSION['role']))
     {
         header("Location: ../../login.php"); 
