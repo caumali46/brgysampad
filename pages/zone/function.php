@@ -12,9 +12,11 @@ if(isset($_POST['btn_add'])){
     $su = mysqli_query($con,"SELECT * from tblzone where username = '".$txt_uname."' ");
     $ct = mysqli_num_rows($su);
 
-    if($ct == 0){
+    if($ct < 1){
         $query = mysqli_query($con,"INSERT INTO tblzone (zone,username,password) 
-            values ('$txt_zone', '$txt_uname', '$txt_pass')") or die('Error: ' . mysqli_error($con));
+            values ('".$txt_zone."', '".$txt_uname."', '".$txt_pass."')") or die('Error: ' . mysqli_error($con));
+        // $query = mysqli_query($con,"INSERT INTO tblzone (zone,username,password) 
+        //     values ('$txt_zone', '$txt_uname', '$txt_pass')") or die('Error: ' . mysqli_error($con));
         if($query == true)
         {
             $_SESSION['added'] = 1;
