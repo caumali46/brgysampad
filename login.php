@@ -85,10 +85,10 @@ if (!$con) {
     $zone = mysqli_query($con, "SELECT * from tblzone where username = '$username' and password = '$password'");
     $numrow_zone = mysqli_num_rows($zone);
 
-// var_dump($_POST);
-// echo "<pre/>";
-// var_dump($numrow_zone);
-// echo "<pre/>";
+    // var_dump($_POST);
+    // echo "<pre/>";
+    // var_dump($numrow_zone);
+    // echo "<pre/>";
     if ($numrow_admin > 0) {
 
       $_SESSION['logged_in'] = TRUE;
