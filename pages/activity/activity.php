@@ -8,6 +8,7 @@ if (!isset($_SESSION['role'])) {
 } else {
     ob_start();
     include('../head_css.php'); ?>
+    <?php include "function.php"; ?>
 
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
