@@ -1,5 +1,5 @@
 <!-- ========================= MODAL ======================= -->
-<div id="addCourseModal" class="modal fade" >
+<div id="addCourseModal" class="modal fade">
   <form method="post">
     <div class="modal-dialog modal-sm" style="width:300px !important;">
       <div class="modal-content">

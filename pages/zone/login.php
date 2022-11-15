@@ -1,6 +1,8 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
-<html> 
+<html>
+<?php
+session_start();
+?>
     <head>
         <meta charset="UTF-8">
         <title>Barangay Sampad Information Management System</title>

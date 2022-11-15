@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html id="clearance">
 <style>
@@ -9,7 +8,8 @@
     }
     @page { size: auto;  margin: 4mm; }
 </style>
-    <?php 
+    <?php
+    session_start();
     if(!isset($_SESSION['role']))
     {
         header("Location: ../../login.php"); 

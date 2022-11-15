@@ -12,22 +12,18 @@ if(isset($_POST['btn_add'])){
     $su = mysqli_query($con,"SELECT * from tblzone where username = '".$txt_uname."' ");
     $ct = mysqli_num_rows($su);
 
-    if($ct < 1){
+    if($ct == 0){
         $query = mysqli_query($con,"INSERT INTO tblzone (zone,username,password) 
-            values ('".$txt_zone."', '".$txt_uname."', '".$txt_pass."')") or die('Error: ' . mysqli_error($con));
-        // $query = mysqli_query($con,"INSERT INTO tblzone (zone,username,password) 
-        //     values ('$txt_zone', '$txt_uname', '$txt_pass')") or die('Error: ' . mysqli_error($con));
+            values ('$txt_zone', '$txt_uname', '$txt_pass')") or die('Error: ' . mysqli_error($con));
         if($query == true)
         {
             $_SESSION['added'] = 1;
-            // header ("location: ".$_SERVER['REQUEST_URI']);
-            echo "<meta http-equiv='refresh' content='0'>";
+            header ("location: ".$_SERVER['REQUEST_URI']);
         } 
     }
     else{
         $_SESSION['duplicateuser'] = 1;
-        // header ("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header ("location: ".$_SERVER['REQUEST_URI']);
     } 
 }
 
@@ -52,14 +48,12 @@ if(isset($_POST['btn_save']))
 
         if($update_query == true){
             $_SESSION['edited'] = 1;
-            // header("location: ".$_SERVER['REQUEST_URI']);
-            echo "<meta http-equiv='refresh' content='0'>";
+            header("location: ".$_SERVER['REQUEST_URI']);
         }
     }
     else{
         $_SESSION['duplicateuser'] = 1;
-        // header ("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header ("location: ".$_SERVER['REQUEST_URI']);
     } 
 }
 
@@ -74,8 +68,7 @@ if(isset($_POST['btn_delete']))
             if($delete_query == true)
             {
                 $_SESSION['delete'] = 1;
-                // header("location: ".$_SERVER['REQUEST_URI']);
-                echo "<meta http-equiv='refresh' content='0'>";
+                header("location: ".$_SERVER['REQUEST_URI']);
             }
         }
     }

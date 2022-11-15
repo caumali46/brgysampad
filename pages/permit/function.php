@@ -26,8 +26,7 @@ if(isset($_POST['btn_add'])){
     if($query == true)
     {
         $_SESSION['added'] = 1;
-        // header ("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header ("location: ".$_SERVER['REQUEST_URI']);
     }   
 }
 
@@ -42,8 +41,7 @@ if(isset($_POST['btn_req'])){
 
     if($reqquery == true)
     {
-        // header ("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header ("location: ".$_SERVER['REQUEST_URI']);
     }   
 }
 
@@ -56,8 +54,7 @@ if(isset($_POST['btn_approve']))
     $approve_query = mysqli_query($con,"UPDATE tblpermit set orNo = '".$txt_ornum."', samount = '".$txt_amount."',status = 'Approved'  where id = '".$txt_id."' ") or die('Error: ' . mysqli_error($con));
 
     if($approve_query == true){
-        // header("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: ".$_SERVER['REQUEST_URI']);
     }
 }
 
@@ -68,8 +65,7 @@ if(isset($_POST['btn_disapprove']))
     $disapprove_query = mysqli_query($con,"UPDATE tblpermit set status = 'Disapproved'  where id = '".$txt_id."' ") or die('Error: ' . mysqli_error($con));
 
     if($disapprove_query == true){
-        // header("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: ".$_SERVER['REQUEST_URI']);
     }
 }
 
@@ -91,8 +87,7 @@ if(isset($_POST['btn_save']))
 
     if($update_query == true){
         $_SESSION['edited'] = 1;
-        // header("location: ".$_SERVER['REQUEST_URI']);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("location: ".$_SERVER['REQUEST_URI']);
     }
 }
 
@@ -107,8 +102,7 @@ if(isset($_POST['btn_delete']))
             if($delete_query == true)
             {
                 $_SESSION['delete'] = 1;
-                // header("location: ".$_SERVER['REQUEST_URI']);
-                echo "<meta http-equiv='refresh' content='0'>";
+                header("location: ".$_SERVER['REQUEST_URI']);
             }
         }
     }
