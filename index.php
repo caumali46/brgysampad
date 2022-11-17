@@ -102,7 +102,7 @@ ob_start();
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="zoom-in" style="box-shadow:5px 5px 15px #47525d;border-radius: 20px;background: url(../image/brgy.jpg); background-size:cover;background-repeat:no-repeat">
-						<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+						<a href="https://www.facebook.com/100075847886371/videos/630992391387833/" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
 					</div>
 
 					<div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
