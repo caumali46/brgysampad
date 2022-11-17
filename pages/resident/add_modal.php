@@ -134,14 +134,14 @@
 
                                 <div class="form-group">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="senior_citizen">
+                                        <label class="form-check-label" for="senior_citizen">
                                             Senior Citizen
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="4ps_member" value="0" id="flexCheckChecked">
-                                        <label class="form-check-label" for="flexCheckChecked">
+                                        <input class="form-check-input" type="checkbox" name="four_ps_member" value="0" id="four_ps_member">
+                                        <label class="form-check-label" for="four_ps_member">
                                             4Ps member
                                         </label>
                                     </div>
@@ -325,6 +325,10 @@
     $(document).ready(function() {
         $(document).on('change', '#wizard-picture', function() {
             readURL(this);
+        });
+
+        $(document).on('change', '#senior_citizen, #four_ps_member', function() {
+            this.value = this.checked ? 1 : 0;
         });
     });
 
