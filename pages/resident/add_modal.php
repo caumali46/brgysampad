@@ -122,10 +122,7 @@
                                     </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label" required></label>
-                                        <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder=""/>
-                                    </div>
+                                   
 
                                     <div class="form-group">
                                         <label class="control-label">Username:</label>
@@ -138,9 +135,9 @@
                                 <div class="col-md-6 col-sm-12">
                                     
                                     <div class="form-group">     
-                                        <label class="control-label" required>Gender:</label>
+                                        <label class="control-label" required>Sex:</label>
                                         <select name="ddl_gender" class="form-control input-sm">
-                                            <option selected="" disabled="">-Select Gender-</option>
+                                            <option selected="" disabled="">-Select Sex-</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                         </select>
@@ -151,10 +148,7 @@
                                         <input name="txt_bplace" class="form-control input-sm" type="text" placeholder="Birthplace" required/>
                                     </div> 
 
-                                    <div class="form-group">
-                                        <label class="control-label"></label>
-                                        <input name="txt_mstatus" class="form-control input-sm" type="text" placeholder="Marital Status" required/>
-                                    </div> 
+                                     
 
                                     <div class="form-group">
                                         <label class="control-label">Purok #:</label>
@@ -166,10 +160,7 @@
                                         <input name="txt_householdmem" class="form-control input-sm" type="number" min="1" placeholder="Total Household Member" required/>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label"></label>
-                                        <input name="txt_rthead" class="form-control input-sm" type="text" placeholder="" required/>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label class="control-label">Occupation:</label>
