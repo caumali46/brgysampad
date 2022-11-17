@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['btn_add'])){
+if (isset($_POST['btn_add'])) {
     $txt_lname = $_POST['txt_lname'];
     $txt_fname = $_POST['txt_fname'];
     $txt_mname = $_POST['txt_mname'];
@@ -43,6 +43,9 @@ if(isset($_POST['btn_add'])){
     $txt_uname = $_POST['txt_uname'];
     $txt_upass = $_POST['txt_upass'];
 
+    $txt_uname = $_POST['senior_citizen'];
+    $txt_upass = $_POST['4ps_member'];
+
     $txt_remarks = $_POST['txt_remarks'];
 
     $name = basename($_FILES['txt_image']['name']);
@@ -51,24 +54,25 @@ if(isset($_POST['btn_add'])){
     $size = $_FILES['txt_image']['size'];
 
     $milliseconds = round(microtime(true) * 1000);
-    $image = $milliseconds.'_'.$name;
+    $image = $milliseconds . '_' . $name;
 
-    if(isset($_SESSION['role'])){
-        $action = 'Added Resident named '.$txt_lname.', '.$txt_fname.' '.$txt_mname;
-        $iquery = mysqli_query($con,"INSERT INTO tbllogs (user,logdate,action) values ('".$_SESSION['role']."', NOW(), '".$action."')");
+    if (isset($_SESSION['role'])) {
+        $action = 'Added Resident named ' . $txt_lname . ', ' . $txt_fname . ' ' . $txt_mname;
+        $iquery = mysqli_query($con, "INSERT INTO tbllogs (user,logdate,action) values ('" . $_SESSION['role'] . "', NOW(), '" . $action . "')");
     }
 
-    $su = mysqli_query($con,"SELECT * from tblresident where username = '".$txt_uname."' ");
+    $su = mysqli_query($con, "SELECT * from tblresident where username = '" . $txt_uname . "' ");
     $ct = mysqli_num_rows($su);
-    
-    if($ct == 0){
 
-        if($name != ""){
-            if(($imagetype=="image/jpeg" || $imagetype=="image/png" || $imagetype=="image/bmp") && $size<=2048000){
-                    if(move_uploaded_file($temp, 'image/'.$image))
-                    {
+    if ($ct == 0) {
+
+        if ($name != "") {
+            if (($imagetype == "image/jpeg" || $imagetype == "image/png" || $imagetype == "image/bmp") && $size <= 2048000) {
+                if (move_uploaded_file($temp, 'image/' . $image)) {
                     $txt_image = $image;
-                    $query = mysqli_query($con,"INSERT INTO tblresident (
+                    $query = mysqli_query(
+                        $con,
+                        "INSERT INTO tblresident (
                                         lname,
                                         fname,
                                         mname,
@@ -144,21 +148,19 @@ if(isset($_POST['btn_add'])){
                                         '$txt_uname', 
                                         '$txt_upass'
                                     )"
-                            ) 
-                            or die('Error: ' . mysqli_error($con));
-                    }
+                    )
+                        or die('Error: ' . mysqli_error($con));
+                }
+            } else {
+                $_SESSION['filesize'] = 1;
+                header("location: " . $_SERVER['REQUEST_URI']);
             }
-            else
-            {
-                $_SESSION['filesize'] = 1; 
-                header ("location: ".$_SERVER['REQUEST_URI']);
-            }
-        }
-        else
-        {
-             $txt_image = 'default.png';
-             
-        $query = mysqli_query($con,"INSERT INTO tblresident (
+        } else {
+            $txt_image = 'default.png';
+
+            $query = mysqli_query(
+                $con,
+                "INSERT INTO tblresident (
                                         lname,
                                         fname,
                                         mname,
@@ -234,28 +236,23 @@ if(isset($_POST['btn_add'])){
                                         '$txt_uname', 
                                         '$txt_upass'
                                     )"
-                            ) 
-                            or die('Error: ' . mysqli_error($con));
-             
+            )
+                or die('Error: ' . mysqli_error($con));
         }
 
-        
-            if($query == true)
-            {
-                $_SESSION['added'] = 1;
-                header ("location: ".$_SERVER['REQUEST_URI']);
-            }
-    }
-    else{
+
+        if ($query == true) {
+            $_SESSION['added'] = 1;
+            header("location: " . $_SERVER['REQUEST_URI']);
+        }
+    } else {
         $_SESSION['duplicateuser'] = 1;
-        header ("location: ".$_SERVER['REQUEST_URI']);
-    }    
-
+        header("location: " . $_SERVER['REQUEST_URI']);
+    }
 }
 
 
-if(isset($_POST['btn_save']))
-{
+if (isset($_POST['btn_save'])) {
     $txt_id = $_POST['hidden_id'];
     $txt_edit_lname = $_POST['txt_edit_lname'];
     $txt_edit_fname = $_POST['txt_edit_fname'];
@@ -309,147 +306,133 @@ if(isset($_POST['btn_save']))
     $size = $_FILES['txt_edit_image']['size'];
 
     $milliseconds = round(microtime(true) * 1000);
-    $image = $milliseconds.'_'.$name;
+    $image = $milliseconds . '_' . $name;
 
-    if(isset($_SESSION['role'])){
-        $action = 'Update Resident named '.$txt_edit_lname.', '.$txt_edit_fname.' '.$txt_edit_mname;
-        $iquery = mysqli_query($con,"INSERT INTO tbllogs (user,logdate,action) values ('".$_SESSION['role']."', NOW(), '".$action."')");
+    if (isset($_SESSION['role'])) {
+        $action = 'Update Resident named ' . $txt_edit_lname . ', ' . $txt_edit_fname . ' ' . $txt_edit_mname;
+        $iquery = mysqli_query($con, "INSERT INTO tbllogs (user,logdate,action) values ('" . $_SESSION['role'] . "', NOW(), '" . $action . "')");
     }
 
-$su = mysqli_query($con,"SELECT * from tblresident where username = '".$txt_edit_uname."' and id not in (".$txt_id.") ");
-$ct = mysqli_num_rows($su);
+    $su = mysqli_query($con, "SELECT * from tblresident where username = '" . $txt_edit_uname . "' and id not in (" . $txt_id . ") ");
+    $ct = mysqli_num_rows($su);
 
-if($ct == 0){
+    if ($ct == 0) {
 
-    if($name != ""){
-            if(($imagetype=="image/jpeg" || $imagetype=="image/png" || $imagetype=="image/bmp") && $size<=2048000){
-                if(move_uploaded_file($temp, 'image/'.$image))
-                {
+        if ($name != "") {
+            if (($imagetype == "image/jpeg" || $imagetype == "image/png" || $imagetype == "image/bmp") && $size <= 2048000) {
+                if (move_uploaded_file($temp, 'image/' . $image)) {
 
-                $txt_edit_image = $image;
-                $update_query = mysqli_query($con,"UPDATE tblresident set 
-                                        lname = '".$txt_edit_lname."',
-                                        fname = '".$txt_edit_fname."',
-                                        mname = '".$txt_edit_mname."',
-                                        bdate = '".$txt_edit_bdate."',
-                                        bplace = '".$txt_edit_bplace."',
-                                        age = '".$txt_edit_age."',
-                                        barangay = '".$txt_edit_brgy."',
-                                        zone = '".$txt_edit_zone."',
-                                        totalhousehold = '".$txt_edit_householdmem."',
-                                        differentlyabledperson = '".$txt_edit_dperson."',
-                                        relationtohead = '".$txt_edit_rthead."',
-                                        maritalstatus = '".$txt_edit_mstatus."',
-                                        bloodtype = '".$txt_edit_btype."',
-                                        civilstatus = '".$txt_edit_cstatus."',
-                                        occupation = '".$txt_edit_occp."',
-                                        monthlyincome = '".$txt_edit_income."',
-                                        householdnum = '".$txt_edit_householdnum."',
-                                        lengthofstay = '".$txt_edit_length."',
-                                        religion = '".$txt_edit_religion."',
-                                        nationality = '".$txt_edit_national."',
-                                        gender = '".$ddl_edit_gender."',
-                                        skills = '".$txt_edit_skills."',
-                                        igpitID = '".$txt_edit_igpit."',
-                                        philhealthNo = '".$txt_edit_phno."',
-                                        highestEducationalAttainment = '".$ddl_edit_eattain."',
-                                        houseOwnershipStatus = '".$ddl_edit_hos."',
-                                        landOwnershipStatus = '".$ddl_edit_los."',
-                                        dwellingtype = '".$ddl_edit_dtype."',
-                                        waterUsage = '".$txt_edit_water."',
-                                        lightningFacilities = '".$txt_edit_lightning."',
-                                        sanitaryToilet = '".$txt_edit_toilet."',
-                                        formerAddress = '".$txt_edit_faddress."',
-                                        remarks = '".$txt_edit_remarks."',
-                                        image = '".$txt_edit_image."',
-                                        username = '".$txt_edit_uname."',
-                                        password = '".$txt_edit_upass."'
-                                        where id = '".$txt_id."'
+                    $txt_edit_image = $image;
+                    $update_query = mysqli_query($con, "UPDATE tblresident set 
+                                        lname = '" . $txt_edit_lname . "',
+                                        fname = '" . $txt_edit_fname . "',
+                                        mname = '" . $txt_edit_mname . "',
+                                        bdate = '" . $txt_edit_bdate . "',
+                                        bplace = '" . $txt_edit_bplace . "',
+                                        age = '" . $txt_edit_age . "',
+                                        barangay = '" . $txt_edit_brgy . "',
+                                        zone = '" . $txt_edit_zone . "',
+                                        totalhousehold = '" . $txt_edit_householdmem . "',
+                                        differentlyabledperson = '" . $txt_edit_dperson . "',
+                                        relationtohead = '" . $txt_edit_rthead . "',
+                                        maritalstatus = '" . $txt_edit_mstatus . "',
+                                        bloodtype = '" . $txt_edit_btype . "',
+                                        civilstatus = '" . $txt_edit_cstatus . "',
+                                        occupation = '" . $txt_edit_occp . "',
+                                        monthlyincome = '" . $txt_edit_income . "',
+                                        householdnum = '" . $txt_edit_householdnum . "',
+                                        lengthofstay = '" . $txt_edit_length . "',
+                                        religion = '" . $txt_edit_religion . "',
+                                        nationality = '" . $txt_edit_national . "',
+                                        gender = '" . $ddl_edit_gender . "',
+                                        skills = '" . $txt_edit_skills . "',
+                                        igpitID = '" . $txt_edit_igpit . "',
+                                        philhealthNo = '" . $txt_edit_phno . "',
+                                        highestEducationalAttainment = '" . $ddl_edit_eattain . "',
+                                        houseOwnershipStatus = '" . $ddl_edit_hos . "',
+                                        landOwnershipStatus = '" . $ddl_edit_los . "',
+                                        dwellingtype = '" . $ddl_edit_dtype . "',
+                                        waterUsage = '" . $txt_edit_water . "',
+                                        lightningFacilities = '" . $txt_edit_lightning . "',
+                                        sanitaryToilet = '" . $txt_edit_toilet . "',
+                                        formerAddress = '" . $txt_edit_faddress . "',
+                                        remarks = '" . $txt_edit_remarks . "',
+                                        image = '" . $txt_edit_image . "',
+                                        username = '" . $txt_edit_uname . "',
+                                        password = '" . $txt_edit_upass . "'
+                                        where id = '" . $txt_id . "'
                                 ") or die('Error: ' . mysqli_error($con));
                 }
+            } else {
+                $_SESSION['filesize'] = 1;
+                header("location: " . $_SERVER['REQUEST_URI']);
             }
-            else{
-                $_SESSION['filesize'] = 1; 
-                header ("location: ".$_SERVER['REQUEST_URI']);
-            }
-    }
-    else{
+        } else {
 
-        $chk_image = mysqli_query($con,"SELECT * from tblresident where id = '".$_POST['hidden_id']."' ");
-        $rowimg = mysqli_fetch_array($chk_image);
+            $chk_image = mysqli_query($con, "SELECT * from tblresident where id = '" . $_POST['hidden_id'] . "' ");
+            $rowimg = mysqli_fetch_array($chk_image);
 
-        $txt_edit_image = $rowimg['image'];
-        $update_query = mysqli_query($con,"UPDATE tblresident set 
-                                        lname = '".$txt_edit_lname."',
-                                        fname = '".$txt_edit_fname."',
-                                        mname = '".$txt_edit_mname."',
-                                        bdate = '".$txt_edit_bdate."',
-                                        bplace = '".$txt_edit_bplace."',
-                                        age = '".$txt_edit_age."',
-                                        barangay = '".$txt_edit_brgy."',
-                                        zone = '".$txt_edit_zone."',
-                                        totalhousehold = '".$txt_edit_householdmem."',
-                                        differentlyabledperson = '".$txt_edit_dperson."',
-                                        relationtohead = '".$txt_edit_rthead."',
-                                        maritalstatus = '".$txt_edit_mstatus."',
-                                        bloodtype = '".$txt_edit_btype."',
-                                        civilstatus = '".$txt_edit_cstatus."',
-                                        occupation = '".$txt_edit_occp."',
-                                        monthlyincome = '".$txt_edit_income."',
-                                        householdnum = '".$txt_edit_householdnum."',
-                                        lengthofstay = '".$txt_edit_length."',
-                                        religion = '".$txt_edit_religion."',
-                                        nationality = '".$txt_edit_national."',
-                                        gender = '".$ddl_edit_gender."',
-                                        skills = '".$txt_edit_skills."',
-                                        igpitID = '".$txt_edit_igpit."',
-                                        philhealthNo = '".$txt_edit_phno."',
-                                        highestEducationalAttainment = '".$ddl_edit_eattain."',
-                                        houseOwnershipStatus = '".$ddl_edit_hos."',
-                                        landOwnershipStatus = '".$ddl_edit_los."',
-                                        dwellingtype = '".$ddl_edit_dtype."',
-                                        waterUsage = '".$txt_edit_water."',
-                                        lightningFacilities = '".$txt_edit_lightning."',
-                                        sanitaryToilet = '".$txt_edit_toilet."',
-                                        formerAddress = '".$txt_edit_faddress."',
-                                        remarks = '".$txt_edit_remarks."',
-                                        image = '".$txt_edit_image."',
-                                        username = '".$txt_edit_uname."',
-                                        password = '".$txt_edit_upass."'
-                                        where id = '".$txt_id."'
+            $txt_edit_image = $rowimg['image'];
+            $update_query = mysqli_query($con, "UPDATE tblresident set 
+                                        lname = '" . $txt_edit_lname . "',
+                                        fname = '" . $txt_edit_fname . "',
+                                        mname = '" . $txt_edit_mname . "',
+                                        bdate = '" . $txt_edit_bdate . "',
+                                        bplace = '" . $txt_edit_bplace . "',
+                                        age = '" . $txt_edit_age . "',
+                                        barangay = '" . $txt_edit_brgy . "',
+                                        zone = '" . $txt_edit_zone . "',
+                                        totalhousehold = '" . $txt_edit_householdmem . "',
+                                        differentlyabledperson = '" . $txt_edit_dperson . "',
+                                        relationtohead = '" . $txt_edit_rthead . "',
+                                        maritalstatus = '" . $txt_edit_mstatus . "',
+                                        bloodtype = '" . $txt_edit_btype . "',
+                                        civilstatus = '" . $txt_edit_cstatus . "',
+                                        occupation = '" . $txt_edit_occp . "',
+                                        monthlyincome = '" . $txt_edit_income . "',
+                                        householdnum = '" . $txt_edit_householdnum . "',
+                                        lengthofstay = '" . $txt_edit_length . "',
+                                        religion = '" . $txt_edit_religion . "',
+                                        nationality = '" . $txt_edit_national . "',
+                                        gender = '" . $ddl_edit_gender . "',
+                                        skills = '" . $txt_edit_skills . "',
+                                        igpitID = '" . $txt_edit_igpit . "',
+                                        philhealthNo = '" . $txt_edit_phno . "',
+                                        highestEducationalAttainment = '" . $ddl_edit_eattain . "',
+                                        houseOwnershipStatus = '" . $ddl_edit_hos . "',
+                                        landOwnershipStatus = '" . $ddl_edit_los . "',
+                                        dwellingtype = '" . $ddl_edit_dtype . "',
+                                        waterUsage = '" . $txt_edit_water . "',
+                                        lightningFacilities = '" . $txt_edit_lightning . "',
+                                        sanitaryToilet = '" . $txt_edit_toilet . "',
+                                        formerAddress = '" . $txt_edit_faddress . "',
+                                        remarks = '" . $txt_edit_remarks . "',
+                                        image = '" . $txt_edit_image . "',
+                                        username = '" . $txt_edit_uname . "',
+                                        password = '" . $txt_edit_upass . "'
+                                        where id = '" . $txt_id . "'
                                 ") or die('Error: ' . mysqli_error($con));
-    }
-        
-        if($update_query == true){
-            $_SESSION['edited'] = 1;
-            header("location: ".$_SERVER['REQUEST_URI']);
         }
 
-    }
-    else{
+        if ($update_query == true) {
+            $_SESSION['edited'] = 1;
+            header("location: " . $_SERVER['REQUEST_URI']);
+        }
+    } else {
         $_SESSION['duplicateuser'] = 1;
-        header ("location: ".$_SERVER['REQUEST_URI']);
-    }  
-
-    
+        header("location: " . $_SERVER['REQUEST_URI']);
+    }
 }
 
-if(isset($_POST['btn_delete']))
-{
-    if(isset($_POST['chk_delete']))
-    {
-        foreach($_POST['chk_delete'] as $value)
-        {
-            $delete_query = mysqli_query($con,"DELETE from tblresident where id = '$value' ") or die('Error: ' . mysqli_error($con));
-                    
-            if($delete_query == true)
-            {
+if (isset($_POST['btn_delete'])) {
+    if (isset($_POST['chk_delete'])) {
+        foreach ($_POST['chk_delete'] as $value) {
+            $delete_query = mysqli_query($con, "DELETE from tblresident where id = '$value' ") or die('Error: ' . mysqli_error($con));
+
+            if ($delete_query == true) {
                 $_SESSION['delete'] = 1;
-                header("location: ".$_SERVER['REQUEST_URI']);
+                header("location: " . $_SERVER['REQUEST_URI']);
             }
         }
     }
 }
-
-
-?>

@@ -20,7 +20,7 @@
 
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group" style="margin-bottom: 8px;">
+                                <div class="form-group" style="height: 5em;">
                                     <label class="control-label">Username:</label>
                                     <input name="txt_uname" id="username" class="form-control input-sm input-size" type="text" placeholder="Username" required />
                                     <label id="user_msg" style="color:#CC0000;"></label>
@@ -43,14 +43,11 @@
                                     <label class="control-label">Birthdate:</label>
                                     <input name="txt_bdate" class="form-control input-sm input-size" type="date" placeholder="Birthdate" required />
                                 </div>
-                                <!--
-                                    <div class="form-group">
-                                        <label class="control-label">Age:</label>
-                                        <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required/>
-                                    </div> 
-                                
-                                -->
 
+                                <div class="form-group">
+                                    <label class="control-label">Age:</label>
+                                    <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required />
+                                </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Barangay:</label>
@@ -77,10 +74,10 @@
                                     <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Civil Status" required />
                                 </div>
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label">Length of Stay: (in Months)</label><br>
                                     <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Length of Stay" required />
-                                </div> -->
+                                </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Religion:</label>
@@ -126,26 +123,34 @@
                                 </div>
 
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label" required>Sanitary Toilet:</label>
                                     <select name="txt_toilet" class="form-control input-sm input-size">
                                         <option>Water-sealed</option>
                                         <option>Antipolo</option>
                                         <option>None</option>
                                     </select>
-                                </div> -->
+                                </div>
 
-
-                                <!-- <div class="form-group">
-                                    <label class="control-label" required>Remarks:</label>
-                                    <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="Remarks" />
-                                </div> -->
-
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Senior Citizen
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="4ps_member" value="0" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            4Ps member
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group" style="margin-bottom: 38px;">
-                                    <label class="control-label">Password:</label>
+                                <div class="form-group" style="height: 5em;">
+                                    <label class=" control-label">Password:</label>
                                     <input name="txt_upass" class="form-control input-sm" type="password" placeholder="Password" required />
                                 </div>
                                 <hr>
@@ -188,10 +193,10 @@
                                     <input name="txt_occp" class="form-control input-sm" type="text" placeholder="Occupation" required />
                                 </div>
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label">Monthly Income:</label>
                                     <input name="txt_income" class="form-control input-sm" type="number" min="1" placeholder="Monthly Income" required />
-                                </div> -->
+                                </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Nationality:</label>
@@ -199,10 +204,10 @@
                                 </div>
 
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label">Skills:</label>
                                     <input name="txt_skills" class="form-control input-sm" type="text" placeholder="Skills" required />
-                                </div> -->
+                                </div>
 
                                 <div class="form-group">
                                     <label class="control-label">PhilHealth #:</label>
@@ -227,21 +232,24 @@
                                     </select>
                                 </div>
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label" required>Lightning Facilities:</label>
                                     <select name="txt_lightning" class="form-control input-sm input-size">
                                         <option>Electric</option>
                                         <option>Lamp</option>
                                     </select>
-                                </div> -->
+                                </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Current Address:</label>
                                     <input name="txt_faddress" class="form-control input-sm" type="text" placeholder="Current Address" required />
                                 </div>
 
+                                <div class="form-group">
+                                    <label class="control-label" required>Remarks:</label>
+                                    <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="Remarks" />
+                                </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -256,23 +264,6 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        // Prepare the preview for profile picture
-        $("#wizard-picture").change(function() {
-            readURL(this);
-        });
-    });
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
     $(document).ready(function() {
 
         var timeOut = null; // this used for hold few seconds to made ajax request
@@ -321,7 +312,6 @@
                 username: username
             },
             function(result) {
-                console.log(result);
                 if (result != 0) {
                     $('#user_msg').html('Not Available');
                     document.getElementById("btn_add").disabled = true;
@@ -330,5 +320,22 @@
                     document.getElementById("btn_add").disabled = false;
                 }
             });
+    }
+
+    $(document).ready(function() {
+        $(document).on('change', '#wizard-picture', function() {
+            readURL(this);
+        });
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                console.log($('#wizardPicturePreview'));
+                $('.picture-container #wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
     }
 </script>
