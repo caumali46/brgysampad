@@ -59,7 +59,7 @@ if ($_SESSION['role'] == "Administrator") {
                             </li>
                             <li>
                                 <a href="../activity/activity.php">
-                                    <i class="fa fa-calendar"></i> <span>Activity</span>
+                                    <i class="fa fa-calendar"></i> <span>Programs/ Activities</span>
                                 </a>
                             </li>
                             <li>
@@ -123,7 +123,7 @@ if ($_SESSION['role'] == "Administrator") {
                             </li>
                             <li>
                                 <a href="../activity/activity.php">
-                                    <i class="fa fa-calendar"></i> <span>Activity</span>
+                                    <i class="fa fa-calendar"></i> <span>Programs/ Activity</span>
                                 </a>
                             </li>
                         </ul>';
