@@ -33,11 +33,6 @@ if ($_SESSION['role'] == "Administrator") {
                                 </a>
                             </li>
                             <li>
-                                <a href="../zone/zone.php">
-                                    <i class="fa fa-user"></i> <span>Purok Leader</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="../household/household.php">
                                     <i class="fa fa-home"></i> <span>Household</span>
                                 </a>
