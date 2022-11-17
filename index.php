@@ -107,9 +107,9 @@ ob_start();
 
 					<div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
 						<div class="box-heading" data-aos="fade-up">
-							<h4>About the team</h4>
-							<h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-							<p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+							<h4>About us</h4>
+							<h3></h3>
+							<p>Barangay Sampad is an area under the jurisdiction of the municipality of Cardona Rizal, it is an island in Cardona which is captain Romulo Sison, it consists of 2,205 population, 544 houses are here, and 630 families are here. and the main occupation here is fishing such as building a fishpond, net fishing, and so on. Another livelihood of the Sampad people is sewing, and cutting bamboo, and Sampad is famous for drying water lilies to make bugs and mats.</p>
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@ ob_start();
 				<div class="section-title" data-aos="zoom-in">
 					<h2>Gallery</h2>
 					<h3>Check our <span>Gallery</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+					
 				</div>
 
 				<div class="row">
@@ -291,16 +291,16 @@ ob_start();
 				<div class="section-title" data-aos="zoom-in">
 					<h2>F.A.Q</h2>
 					<h3>Frequently Asked <span>Questions</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+					
 				</div>
 
 				<div class="faq-list">
 					<ul>
 						<li data-aos="fade-up">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How the system helps the Resident of Barangay Sampad ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
 								<p>
-									Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+									This system will help facilitate the transaction of obtaining certificates and permits and its other features
 								</p>
 							</div>
 						</li>
