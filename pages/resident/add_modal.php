@@ -63,8 +63,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Length of Stay: (in Months)</label><br>
-                                        <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Length of Stay" required/>
+                                        <label class="control-label">Year of Residency</label><br>
+                                        <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Year of Residency" required/>
                                     </div>
 
 
@@ -74,8 +74,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">IgpitID:</label>
-                                        <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="" min="1" required/>
+                                        <label class="control-label">PostalID:</label>
+                                        <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="e.g #1950" min="1" required/>
                                     </div>
 
                                     <div class="form-group">
@@ -123,8 +123,8 @@
 
 
                                     <div class="form-group">
-                                        <label class="control-label" required>Remarks:</label>
-                                        <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="Remarks"/>
+                                        <label class="control-label" required></label>
+                                        <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder=""/>
                                     </div>
 
                                     <div class="form-group">
@@ -152,7 +152,7 @@
                                     </div> 
 
                                     <div class="form-group">
-                                        <label class="control-label">Marital Status:</label>
+                                        <label class="control-label"></label>
                                         <input name="txt_mstatus" class="form-control input-sm" type="text" placeholder="Marital Status" required/>
                                     </div> 
 
@@ -167,8 +167,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Relationship to Head:</label>
-                                        <input name="txt_rthead" class="form-control input-sm" type="text" placeholder="Relationship to Head" required/>
+                                        <label class="control-label"></label>
+                                        <input name="txt_rthead" class="form-control input-sm" type="text" placeholder="" required/>
                                     </div>
 
                                     <div class="form-group">
@@ -207,13 +207,6 @@
                                     </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label" required>Dwelling Type:</label>
-                                        <select name="ddl_dtype" class="form-control input-sm">
-                                            <option value="1st Option">1st Option</option>
-                                            <option value="2nd Option">2nd Option</option>
-                                        </select>
-                                    </div>
 
                                     <div class="form-group">
                                         <label class="control-label" required>Lightning Facilities:</label>
