@@ -107,9 +107,9 @@ ob_start();
 
 					<div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
 						<div class="box-heading" data-aos="fade-up">
-							<h4>About the team</h4>
-							<h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-							<p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+							<h4>About us</h4>
+							<h3></h3>
+							<p>Barangay Sampad is an area under the jurisdiction of the municipality of Cardona Rizal, it is an island in Cardona which is captain Romulo Sison, it consists of 2,205 population, 544 houses are here, and 630 families are here. and the main occupation here is fishing such as building a fishpond, net fishing, and so on. Another livelihood of the Sampad people is sewing, and cutting bamboo, and Sampad is famous for drying water lilies to make bugs and mats.</p>
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@ ob_start();
 				<div class="section-title" data-aos="zoom-in">
 					<h2>Gallery</h2>
 					<h3>Check our <span>Gallery</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+					
 				</div>
 
 				<div class="row">
@@ -291,52 +291,55 @@ ob_start();
 				<div class="section-title" data-aos="zoom-in">
 					<h2>F.A.Q</h2>
 					<h3>Frequently Asked <span>Questions</span></h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+					
 				</div>
 
 				<div class="faq-list">
 					<ul>
 						<li data-aos="fade-up">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How the system helps the Resident of Barangay Sampad ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
 								<p>
-									Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+									This system will help facilitate the transaction of obtaining certificates and permits and its other features
 								</p>
 							</div>
 						</li>
 
 						<li data-aos="fade-up" data-aos-delay="100">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">how do you get your own account?  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+									
+go to the barangay or contact the secretary to create your own account so that you can access this website.                   
 								</p>
 							</div>
 						</li>
 
 						<li data-aos="fade-up" data-aos-delay="200">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Can I request certificates? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+									yes by logging in to this website using the account that came from the secretary. Once you have entered this website, you can request Certificates.
 								</p>
 							</div>
 						</li>
 
 						<li data-aos="fade-up" data-aos-delay="300">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Can I pay for certificates using this website? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+									yes through Gcash, you just send your payment to the Gcash of the barangay and then you can send and receive certificates proving that you have paid.
 								</p>
 							</div>
 						</li>
 
 						<li data-aos="fade-up" data-aos-delay="400">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">
+What can you do if you encounter a problem with the website?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+									
+First, you contact the admin by calling their number listed below or emailing their gmail account, to explain and settle your problem.
 								</p>
 							</div>
 						</li>
@@ -354,7 +357,7 @@ ob_start();
 				<div class="section-title" data-aos="zoom-in">
 					<h2>Contact</h2>
 					<h3>Check our <span>Contact</span> Details</h3>
-					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+					
 				</div>
 
 				<div>
@@ -373,13 +376,13 @@ ob_start();
 							<div class="email">
 								<i class="bi bi-envelope"></i>
 								<h4>Email:</h4>
-								<p>info@example.com</p>
+								<p>Barangaysampad2023@gmail.com</p>
 							</div>
 
 							<div class="phone">
 								<i class="bi bi-phone"></i>
 								<h4>Call:</h4>
-								<p>8539-2399</p>
+								<p>09068398049</p>
 							</div>
 
 						</div>
@@ -431,12 +434,12 @@ ob_start();
 					<div class="col-lg-6">
 						<h3>Barangay Sampad</h3>
 						<a href="cardonarizal.gov.ph">cardonarizal.gov.ph</a>
-						<p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+						
 					</div>
 				</div>
 
 				<div class="social-links">
-					<a href="facebook.com/brgy.sampad" class="facebook"><i class="bx bxl-facebook"></i></a>
+					<a href="https://www.facebook.com/brgy.sampad" class="facebook"><i class="bx bxl-facebook"></i></a>
 				</div>
 
 			</div>
