@@ -20,7 +20,7 @@ echo '
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     ';
 if ($_SESSION['role'] == "Administrator") {
-  echo '
+    echo '
                     <ul class="sidebar-menu">
                             <li>
                                 <a href="../dashboard/dashboard.php">
@@ -30,11 +30,6 @@ if ($_SESSION['role'] == "Administrator") {
                             <li>
                                 <a href="../officials/officials.php">
                                     <i class="fa fa-user"></i> <span>Barangay Officials</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../staff/staff.php">
-                                    <i class="fa fa-user"></i> <span>Staff</span>
                                 </a>
                             </li>
                             <li>
@@ -85,7 +80,7 @@ if ($_SESSION['role'] == "Administrator") {
                             
                     </ul>';
 } elseif ($_SESSION['role'] == "Zone Leader") {
-  echo '
+    echo '
                         <ul class="sidebar-menu">
                             <li>
                                 <a href="../permit/permit.php">
@@ -99,7 +94,7 @@ if ($_SESSION['role'] == "Administrator") {
                             </li>
                         </ul>';
 } elseif (isset($_SESSION['staff'])) {
-  echo '
+    echo '
                         <ul class="sidebar-menu">
                             <li>
                                 <a href="../officials/officials.php">
@@ -114,11 +109,6 @@ if ($_SESSION['role'] == "Administrator") {
                             <li>
                                 <a href="../resident/resident.php">
                                     <i class="fa fa-users"></i> <span>Resident</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../zone/zone.php">
-                                    <i class="fa fa-user"></i> <span>Purok Leader</span>
                                 </a>
                             </li>
                             <li>
@@ -143,7 +133,7 @@ if ($_SESSION['role'] == "Administrator") {
                             </li>
                         </ul>';
 } else {
-  echo '
+    echo '
                         <ul class="sidebar-menu">
                             <li>
                                 <a href="../permit/permit.php">
@@ -157,7 +147,7 @@ if ($_SESSION['role'] == "Administrator") {
                             </li>
                             <li>
                                 <a href="../activity/activity.php">
-                                    <i class="fa fa-calendar"></i> <span>Activity</span>
+                                    <i class="fa fa-calendar"></i> <span>Programs/ Activities</span>
                                 </a>
                             </li>
                         </ul>';
