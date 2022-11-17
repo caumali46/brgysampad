@@ -34,6 +34,10 @@
     <link href="../../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../../css/select2.css" rel="stylesheet" type="text/css" />
 
+    <!-- Custom Css Files -->
+    <link href="../../css/CUSTOM/resident-styles.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Theme style -->
     <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <link href="../../css/CustomAdmin.css" rel="stylesheet" type="text/css" />
