@@ -75,8 +75,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Length of Stay: (in Months)</label><br>
-                                    <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Length of Stay" required />
+                                    <label class="control-label">Year of Residency</label><br>
+                                    <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Year of Residency" required />
                                 </div>
 
                                 <div class="form-group">
@@ -85,8 +85,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">IgpitID:</label>
-                                    <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="" min="1" required />
+                                    <label class="control-label">PostalID:</label>
+                                    <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="e.g #1950" min="1" required />
                                 </div>
 
                                 <div class="form-group">
@@ -155,9 +155,9 @@
                                 </div>
                                 <hr>
                                 <div class="form-group">
-                                    <label class="control-label" required>Gender:</label>
+                                    <label class="control-label" required>Sex:</label>
                                     <select name="ddl_gender" class="form-control input-sm">
-                                        <option selected="" disabled="">-Select Gender-</option>
+                                        <option selected="" disabled="">-Select Sex-</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
@@ -169,7 +169,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Marital Status:</label>
+                                    <label class="control-label"></label>
                                     <input name="txt_mstatus" class="form-control input-sm" type="text" placeholder="Marital Status" required />
                                 </div>
 
@@ -246,8 +246,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label" required>Remarks:</label>
-                                    <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="Remarks" />
+                                    <label class="control-label" required></label>
+                                    <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="" />
                                 </div>
                             </div>
                         </div>
