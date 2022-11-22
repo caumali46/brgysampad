@@ -50,7 +50,7 @@ if (!isset($_SESSION['role'])) {
                                         <?php
                                         if (!isset($_SESSION['staff'])) {
                                         ?>
-                                            <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                            <!-- <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button> -->
                                         <?php
                                         }
                                         ?>
@@ -62,20 +62,14 @@ if (!isset($_SESSION['role'])) {
                                         <table id="table" class="table table-bordered table-striped">
                                             <thead>
                                                 <tr>
-                                                    <?php
-                                                    if (!isset($_SESSION['staff'])) {
-                                                    ?>
-                                                        <th style="width: 20px !important;"><input type="checkbox" name="chk_delete[]" class="cbxMain" onchange="checkMain(this)" /></th>
-                                                    <?php
-                                                    }
-                                                    ?>
+                                                    <th>ID</th>
                                                     <th>Purok</th>
                                                     <th>Image</th>
-                                                    <th>Name</th>
+                                                    <th style="width: 150px !important;">Name</th>
                                                     <th>Age</th>
                                                     <th>Gender</th>
-                                                    <th>Former Address</th>
-                                                    <th style="width: 40px !important;">Option</th>
+                                                    <th style="width: 70px !important;">Former Address</th>
+                                                    <th style="width: 150px !important;">Option</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -85,14 +79,17 @@ if (!isset($_SESSION['role'])) {
                                                     while ($row = mysqli_fetch_array($squery)) {
                                                         echo '
                                                     <tr>
-                                                        <td><input type="checkbox" name="chk_delete[]" class="chk_delete" value="' . $row['id'] . '" /></td>
+                                                        <td>' . $row['id'] . '</td>
                                                         <td>' . $row['zone'] . '</td>
                                                         <td style="width:70px;"><image src="image/' . basename($row['image']) . '" style="width:60px;height:60px;"/></td>
                                                         <td>' . $row['cname'] . '</td>
                                                         <td>' . $row['age'] . '</td>
                                                         <td>' . $row['gender'] . '</td>
                                                         <td>' . $row['formerAddress'] . '</td>
-                                                        <td><button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></td>
+                                                        <td>
+                                                            <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm" ><i class="fa fa-trash-o" aria-hidden="true"></i> Archive</button>
+                                                        </td>
                                                     </tr>
                                                     ';
 
@@ -109,7 +106,10 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['age'] . '</td>
                                                         <td>' . $row['gender'] . '</td>
                                                         <td>' . $row['formerAddress'] . '</td>
-                                                        <td><button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></td>
+                                                        <td>
+                                                            <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm" ><i class="fa fa-trash-o" aria-hidden="true"></i> Archive</button>
+                                                        </td>
                                                     </tr>
                                                     ';
 
@@ -120,7 +120,7 @@ if (!isset($_SESSION['role'])) {
                                             </tbody>
                                         </table>
 
-                                        <?php include "../deleteModal.php"; ?>
+                                        <!-- include "../deleteModal.php"; -->
 
                                     </form>
                                 </div><!-- /.box-body -->

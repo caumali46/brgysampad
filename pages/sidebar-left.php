@@ -41,12 +41,7 @@ if ($_SESSION['role'] == "Administrator") {
                                 <a href="../resident/resident.php">
                                     <i class="fa fa-users"></i> <span>Resident</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="../permit/permit.php">
-                                    <i class="fa fa-file"></i> <span>Business Permit</span>
-                                </a>
-                            </li>
+                            </li> 
                             <li>
                                 <a href="../blotter/blotter.php">
                                     <i class="fa fa-users"></i> <span>Blotter</span>
@@ -76,12 +71,7 @@ if ($_SESSION['role'] == "Administrator") {
                     </ul>';
 } elseif ($_SESSION['role'] == "Zone Leader") {
     echo '
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="../permit/permit.php">
-                                    <i class="fa fa-file"></i> <span>Business Permit</span>
-                                </a>
-                            </li>
+                        <ul class="sidebar-menu"> 
                             <li>
                                 <a href="../clearance/clearance.php">
                                     <i class="fa fa-file"></i> <span>Clearance</span>
@@ -105,12 +95,7 @@ if ($_SESSION['role'] == "Administrator") {
                                 <a href="../resident/resident.php">
                                     <i class="fa fa-users"></i> <span>Resident</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="../permit/permit.php">
-                                    <i class="fa fa-file"></i> <span>Business Permit</span>
-                                </a>
-                            </li>
+                            </li> 
                             <li>
                                 <a href="../blotter/blotter.php">
                                     <i class="fa fa-users"></i> <span>Blotter</span>
@@ -129,12 +114,7 @@ if ($_SESSION['role'] == "Administrator") {
                         </ul>';
 } else {
     echo '
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="../permit/permit.php">
-                                    <i class="fa fa-file"></i> <span>Business Permit</span>
-                                </a>
-                            </li>
+                        <ul class="sidebar-menu"> 
                             <li>
                                 <a href="../clearance/clearance.php">
                                     <i class="fa fa-file"></i> <span>Clearance</span>

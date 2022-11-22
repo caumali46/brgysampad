@@ -42,4 +42,18 @@
     <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <link href="../../css/CustomAdmin.css" rel="stylesheet" type="text/css" />
     <script src="../../js/jquery-1.12.3.js" type="text/javascript"></script>
+
+    <style>
+        .info-box {
+            padding: 1em !important;
+            display: grid;
+            text-align: center;
+            gap: 1em;
+            border-radius: 6px;
+        }
+
+        .info-box i {
+            font-size: 3em;
+        }
+    </style>
 </head>

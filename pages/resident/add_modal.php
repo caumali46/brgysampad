@@ -20,12 +20,12 @@
 
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group" style="height: 5em;">
+                                <!-- <div class="form-group" style="height: 5em;">
                                     <label class="control-label">Username:</label>
                                     <input name="txt_uname" id="username" class="form-control input-sm input-size" type="text" placeholder="Username" required />
                                     <label id="user_msg" style="color:#CC0000;"></label>
                                 </div>
-                                <hr>
+                                <hr> -->
                                 <div class="form-group">
                                     <label class="control-label">Name:</label><br>
                                     <div class="col-sm-4">
@@ -122,7 +122,6 @@
                                     </select>
                                 </div>
 
-
                                 <div class="form-group">
                                     <label class="control-label" required>Sanitary Toilet:</label>
                                     <select name="txt_toilet" class="form-control input-sm input-size">
@@ -149,11 +148,11 @@
                             </div>
 
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group" style="height: 5em;">
+                                <!-- <div class="form-group" style="height: 5em;">
                                     <label class=" control-label">Password:</label>
                                     <input name="txt_upass" class="form-control input-sm" type="password" placeholder="Password" required />
                                 </div>
-                                <hr>
+                                <hr> -->
                                 <div class="form-group">
                                     <label class="control-label" required>Sex:</label>
                                     <select name="ddl_gender" class="form-control input-sm">
