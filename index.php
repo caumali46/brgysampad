@@ -2,6 +2,8 @@
 session_start();
 ob_start();
 ?>
+<?php require_once("pages/connection.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +20,19 @@ ob_start();
 		<!-- ======= About Section ======= -->
 		<!-- Program/Activities/announcments -->
 		<!-- End About Section -->
+
+		<?php require_once("main/activities-programs.php"); ?>
+
+		<!-- ======= Apply for Clearance ======= -->
+		<section id="cta" class="cta">
+			<div class="container" data-aos="zoom-in">
+				<div class="text-center">
+					<h3 class="text-uppercase">Request for Clearance</h3>
+					<a class="cta-btn" href="clearance-application.php"> Register</a>
+				</div>
+
+			</div>
+		</section><!-- End Apply for Clearance -->
 
 		<section class="text-center" style="background: #f5faf0;">
 			<div class="container">
@@ -156,7 +171,6 @@ ob_start();
 
 	<!-- ======= Footer ======= -->
 	<?php require_once("main/partials/footer.html"); ?>
-
 </body>
 
 </html>
