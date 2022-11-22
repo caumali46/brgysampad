@@ -13,10 +13,25 @@
 
 	    <nav id="navbar" class="navbar">
 	      <ul>
-	        <li><a class="nav-link scrollto active" href="/">Home</a></li>
-	        <li><a class=" nav-link scrollto" href="about.php">About</a></li>
-	        <li><a class="nav-link scrollto " href="gallery.php">Gallery</a></li>
-	        <li><a class="nav-link scrollto" href="contact.php">Contact</a></li>
+	        <?php
+          $currentRoute = $_SERVER['REQUEST_URI'];
+          $home = ($currentRoute == '/');
+          $about = strpos($currentRoute, 'about') !== false;
+          $gallery = strpos($currentRoute, 'gallery') !== false;
+          $contact = strpos($currentRoute, 'contact') !== false;
+          ?>
+	        <li><a class="nav-link scrollto <?php if ($home) {
+                                            echo 'active';
+                                          } ?>" href="/">Home</a></li>
+	        <li><a class=" nav-link scrollto <?php if ($about) {
+                                              echo 'active';
+                                            } ?>" href="about.php">About</a></li>
+	        <li><a class="nav-link scrollto <?php if ($gallery) {
+                                            echo 'active';
+                                          } ?>" href="gallery.php">Gallery</a></li>
+	        <li><a class="nav-link scrollto <?php if ($contact) {
+                                            echo 'active';
+                                          } ?>" href="contact.php">Contact</a></li>
 	        <?php
           if (isset($_SESSION['username'])) {
             echo '<li><a class="nav-link scrollto" href="../pages/dashboard/dashboard.php">Dashboard</a></li>';
