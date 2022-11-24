@@ -54,6 +54,7 @@
 
         .info-box i {
             font-size: 3em;
+            color: #fff;
         }
     </style>
 </head>

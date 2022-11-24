@@ -28,7 +28,7 @@ ob_start();
 			<div class="container" data-aos="zoom-in">
 				<div class="text-center">
 					<h3 class="text-uppercase">Request for Clearance</h3>
-					<a class="cta-btn" href="clearance-application.php"> Register</a>
+					<a class="cta-btn" href="clearance-application.php" target="_blank"> Register</a>
 				</div>
 
 			</div>
