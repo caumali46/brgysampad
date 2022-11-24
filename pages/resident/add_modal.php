@@ -103,34 +103,6 @@
                                         <option>Doctorate degree</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <label class="control-label" required>Land Ownership Status:</label>
-                                    <select name="ddl_los" class="form-control input-sm input-size">
-                                        <option>Owned</option>
-                                        <option>Landless</option>
-                                        <option>Tenant</option>
-                                        <option>Care Taker</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label" required>Water Usage:</label>
-                                    <select name="txt_water" class="form-control input-sm input-size">
-                                        <option>Faucet</option>
-                                        <option>Deep Well</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label" required>Sanitary Toilet:</label>
-                                    <select name="txt_toilet" class="form-control input-sm input-size">
-                                        <option>Water-sealed</option>
-                                        <option>Antipolo</option>
-                                        <option>None</option>
-                                    </select>
-                                </div>
-
                                 <div class="form-group">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="senior_citizen">
@@ -166,11 +138,11 @@
                                     <label class="control-label">Birthplace:</label>
                                     <input name="txt_bplace" class="form-control input-sm" type="text" placeholder="Birthplace" required />
                                 </div>
-
+                                <!-- 
                                 <div class="form-group">
                                     <label class="control-label"></label>
                                     <input name="txt_mstatus" class="form-control input-sm" type="text" placeholder="Marital Status" required />
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label class="control-label">Purok #:</label>
@@ -182,10 +154,10 @@
                                     <input name="txt_householdmem" class="form-control input-sm" type="number" min="1" placeholder="Total Household Member" required />
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label class="control-label">Relationship to Head:</label>
                                     <input name="txt_rthead" class="form-control input-sm" type="text" placeholder="Relationship to Head" required />
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label class="control-label">Occupation:</label>
@@ -202,11 +174,11 @@
                                     <input name="txt_national" class="form-control input-sm" type="text" placeholder="Nationality" required />
                                 </div>
 
-
+                                <!-- 
                                 <div class="form-group">
                                     <label class="control-label">Skills:</label>
                                     <input name="txt_skills" class="form-control input-sm" type="text" placeholder="Skills" required />
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label class="control-label">PhilHealth #:</label>
@@ -223,13 +195,13 @@
                                 </div>
 
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label class="control-label" required>Dwelling Type:</label>
                                     <select name="ddl_dtype" class="form-control input-sm">
                                         <option value="1st Option">1st Option</option>
                                         <option value="2nd Option">2nd Option</option>
                                     </select>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label class="control-label" required>Lightning Facilities:</label>
@@ -244,10 +216,38 @@
                                     <input name="txt_faddress" class="form-control input-sm" type="text" placeholder="Current Address" required />
                                 </div>
 
+
                                 <div class="form-group">
+                                    <label class="control-label" required>Land Ownership Status:</label>
+                                    <select name="ddl_los" class="form-control input-sm input-size">
+                                        <option>Owned</option>
+                                        <option>Landless</option>
+                                        <option>Tenant</option>
+                                        <option>Care Taker</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" required>Water Usage:</label>
+                                    <select name="txt_water" class="form-control input-sm input-size">
+                                        <option>Faucet</option>
+                                        <option>Deep Well</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" required>Sanitary Toilet:</label>
+                                    <select name="txt_toilet" class="form-control input-sm input-size">
+                                        <option>Water-sealed</option>
+                                        <option>Antipolo</option>
+                                        <option>None</option>
+                                    </select>
+                                </div>
+
+                                <!-- <div class="form-group">
                                     <label class="control-label" required></label>
                                     <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="" />
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
