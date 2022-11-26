@@ -27,20 +27,6 @@ echo '
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="control-label">Username:</label>
-                            <input name="txt_edit_uname" class="form-control input-sm" type="text" value="' . $erow['username'] . '"/>
-                        </div>
-                        <hr/>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="control-label">Password:</label>
-                            <input name="txt_edit_upass" class="form-control input-sm" type="password" value="' . $erow['password'] . '"/>
-                        </div> 
-                        <hr/>
-                    </div>
                     <div class="col-md-6 col-sm-12"> 
                         <div class="form-group">
                         <input type="hidden" value="' . $erow['id'] . '" name="hidden_id" id="hidden_id"/>
@@ -87,13 +73,9 @@ echo '
                             <input name="txt_edit_cstatus" class="form-control input-sm input-size" type="text" value="' . $erow['civilstatus'] . '"/>
                         </div>
 
-                        <div class="form-group">
-                            <label class="control-label">Nationality:</label>
-                            <input name="txt_edit_national" class="form-control input-sm" type="text" value="' . $erow['nationality'] . '"/>
-                        </div>
 
                         <div class="form-group">
-                            <label class="control-label">IgpitID:</label>
+                            <label class="control-label">Postal ID:</label>
                             <input name="txt_edit_igpit" class="form-control input-sm" type="number" value="' . $erow['igpitID'] . '" min="1" />
                         </div>
 
@@ -123,22 +105,12 @@ echo '
                                 <option>Care Taker</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Water Usage:</label>
-                        	<select name="txt_edit_water" class="form-control input-sm input-size">
-                                <option>' . $erow['waterUsage'] . '</option>
-                                <option>Faucet</option>
-                                <option>Deep Well</option>
-                            </select>
-                        </div>
                     </div>
-
 
                     <div class="col-md-6 col-sm-12">                   
 
                         <div class="form-group">
-                            <label class="control-label">Gender:</label>
+                            <label class="control-label">Sex:</label>
                             <select name="ddl_edit_gender" class="form-control input-sm">
                                 <option value="' . $erow['gender'] . '" selected="">' . $erow['gender'] . '</option>
                                 <option value="Male">Male</option>
@@ -152,23 +124,13 @@ echo '
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label">Marital Status:</label>
-                            <input name="txt_edit_mstatus" class="form-control input-sm" type="text" value="' . $erow['maritalstatus'] . '"/>
-                        </div> 
-
-                        <div class="form-group">
-                            <label class="control-label">Zone #:</label>
+                            <label class="control-label">Purok #:</label>
                             <input name="txt_edit_zone" class="form-control input-sm" type="text" value="' . $erow['zone'] . '"/>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label">Total Household Member:</label>
                             <input name="txt_edit_householdmem" class="form-control input-sm" type="number" min="1" value="' . $erow['totalhousehold'] . '"/>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Relationship to Head:</label>
-                            <input name="txt_edit_rthead" class="form-control input-sm" type="text" value="' . $erow['relationtohead'] . '"/>
                         </div>
 
                         <div class="form-group">
@@ -201,19 +163,16 @@ echo '
                                 <option value="Live with Parents/Relatives">Live with Parents/Relatives</option>
                             </select>
                         </div>
-
-
+                        
                         <div class="form-group">
-                            <label class="control-label">Dwelling Type:</label>
-                            <select name="ddl_edit_dtype" class="form-control input-sm">
-                                <option value="' . $erow['dwellingtype'] . '">' . $erow['dwellingtype'] . '</option>
-                                <option value="1st Option">1st Option</option>
-                                <option value="2nd Option">2nd Option</option>
+                            <label class="control-label">Water Usage:</label>
+                        	<select name="txt_edit_water" class="form-control input-sm input-size">
+                                <option>' . $erow['waterUsage'] . '</option>
+                                <option>Faucet</option>
+                                <option>Deep Well</option>
                             </select>
                         </div>
-
                     </div>
-
                 </div>
         </div>
         <div class="modal-footer">
