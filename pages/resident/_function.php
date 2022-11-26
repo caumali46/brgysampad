@@ -15,7 +15,7 @@ if (isset($_POST['btn_add'])) {
 
   $txt_brgy = $_POST['txt_brgy'];
   $txt_dperson = $_POST['txt_dperson'];
-  // $txt_mstatus = $_POST['txt_mstatus'];
+  $txt_mstatus = $_POST['txt_mstatus'];
   $txt_zone = $_POST['txt_zone'];
   $txt_householdmem = $_POST['txt_householdmem'];
   // $txt_rthead = $_POST['txt_rthead'];
@@ -43,8 +43,8 @@ if (isset($_POST['btn_add'])) {
   // $txt_uname = $_POST['txt_uname'];
   // $txt_upass = $_POST['txt_upass'];
 
-  $senior_citizen = isset($_POST['senior_citizen']) ? $_POST['senior_citizen'] : 0;
-  $four_ps_member = isset($_POST['four_ps_member']) ? $_POST['four_ps_member'] : 0;
+  $txt_uname = $_POST['senior_citizen'];
+  $txt_upass = $_POST['4ps_member'];
 
   // $txt_remarks = $_POST['txt_remarks'];
 
@@ -61,21 +61,18 @@ if (isset($_POST['btn_add'])) {
     $iquery = mysqli_query($con, "INSERT INTO tbllogs (user,logdate,action) values ('" . $_SESSION['role'] . "', NOW(), '" . $action . "')");
   }
 
-  // $su = mysqli_query($con, "SELECT * from tblresident where username = '" . $txt_uname . "' ");
-  $su = mysqli_query($con, "SELECT * from tblresident");
+  $su = mysqli_query($con, "SELECT * from tblresident where username = '" . $txt_uname . "' ");
   $ct = mysqli_num_rows($su);
 
+  if ($ct == 0) {
 
-
-
-  if ($name != "") {
-    var_dump($name);
-    if (($imagetype == "image/jpeg" || $imagetype == "image/png" || $imagetype == "image/bmp") && $size <= 2048000) {
-      if (move_uploaded_file($temp, 'image/' . $image)) {
-        $txt_image = $image;
-        $query = mysqli_query(
-          $con,
-          "INSERT INTO tblresident (
+    if ($name != "") {
+      if (($imagetype == "image/jpeg" || $imagetype == "image/png" || $imagetype == "image/bmp") && $size <= 2048000) {
+        if (move_uploaded_file($temp, 'image/' . $image)) {
+          $txt_image = $image;
+          $query = mysqli_query(
+            $con,
+            "INSERT INTO tblresident (
                                         lname,
                                         fname,
                                         mname,
@@ -86,6 +83,8 @@ if (isset($_POST['btn_add'])) {
                                         zone,
                                         totalhousehold,
                                         differentlyabledperson,
+                                        relationtohead,
+                                        maritalstatus,
                                         bloodtype,
                                         civilstatus,
                                         occupation,
@@ -93,19 +92,23 @@ if (isset($_POST['btn_add'])) {
                                         householdnum,
                                         lengthofstay,
                                         religion,
+                                        nationality,
                                         gender,
+                                        skills,
                                         igpitID,
                                         philhealthNo,
                                         highestEducationalAttainment,
                                         houseOwnershipStatus,
                                         landOwnershipStatus,
+                                        dwellingtype,
                                         waterUsage,
                                         lightningFacilities,
                                         sanitaryToilet,
                                         formerAddress,
+                                        remarks,
                                         image,
-                                        senior_citizen,
-                                        four_ps_member
+                                        username,
+                                        password
                                     ) 
                                     values (
                                         '$txt_lname', 
@@ -118,6 +121,8 @@ if (isset($_POST['btn_add'])) {
                                         '$txt_zone',
                                         '$txt_householdmem',
                                         '$txt_dperson',
+                                        '$txt_rthead',
+                                        '$txt_mstatus',
                                         '$txt_btype',
                                         '$txt_cstatus',
                                         '$txt_occp',
@@ -125,33 +130,37 @@ if (isset($_POST['btn_add'])) {
                                         '$txt_householdnum',
                                         '$txt_length',
                                         '$txt_religion',
+                                        '$txt_national',
                                         '$ddl_gender', 
+                                        '$txt_skills', 
                                         '$txt_igpit', 
                                         '$txt_phno', 
                                         '$ddl_eattain', 
                                         '$ddl_hos',
                                         '$ddl_los', 
+                                        '$ddl_dtype', 
                                         '$txt_water', 
                                         '$txt_lightning', 
                                         '$txt_toilet', 
                                         '$txt_faddress', 
+                                        '$txt_remarks', 
                                         '$txt_image',
-                                        '$senior_citizen',
-                                        '$four_ps_member'
+                                        '$txt_uname', 
+                                        '$txt_upass'
                                     )"
-        )
-          or die('Error: ' . mysqli_error($con));
+          )
+            or die('Error: ' . mysqli_error($con));
+        }
+      } else {
+        $_SESSION['filesize'] = 1;
+        header("location: " . $_SERVER['REQUEST_URI']);
       }
     } else {
-      $_SESSION['filesize'] = 1;
-      header("location: " . $_SERVER['REQUEST_URI']);
-    }
-  } else {
-    $txt_image = 'default.png';
-    var_dump($name);
-    $query = mysqli_query(
-      $con,
-      "INSERT INTO tblresident (
+      $txt_image = 'default.png';
+
+      $query = mysqli_query(
+        $con,
+        "INSERT INTO tblresident (
                                         lname,
                                         fname,
                                         mname,
@@ -162,6 +171,8 @@ if (isset($_POST['btn_add'])) {
                                         zone,
                                         totalhousehold,
                                         differentlyabledperson,
+                                        relationtohead,
+                                        maritalstatus,
                                         bloodtype,
                                         civilstatus,
                                         occupation,
@@ -169,22 +180,26 @@ if (isset($_POST['btn_add'])) {
                                         householdnum,
                                         lengthofstay,
                                         religion,
+                                        nationality,
                                         gender,
+                                        skills,
                                         igpitID,
                                         philhealthNo,
                                         highestEducationalAttainment,
                                         houseOwnershipStatus,
                                         landOwnershipStatus,
+                                        dwellingtype,
                                         waterUsage,
                                         lightningFacilities,
                                         sanitaryToilet,
                                         formerAddress,
+                                        remarks,
                                         image,
-                                        senior_citizen,
-                                        four_ps_member
+                                        username,
+                                        password
                                     ) 
                                     values (
-                                      '$txt_lname', 
+                                        '$txt_lname', 
                                         '$txt_fname', 
                                         '$txt_mname',  
                                         '$txt_bdate', 
@@ -194,6 +209,8 @@ if (isset($_POST['btn_add'])) {
                                         '$txt_zone',
                                         '$txt_householdmem',
                                         '$txt_dperson',
+                                        '$txt_rthead',
+                                        '$txt_mstatus',
                                         '$txt_btype',
                                         '$txt_cstatus',
                                         '$txt_occp',
@@ -201,27 +218,35 @@ if (isset($_POST['btn_add'])) {
                                         '$txt_householdnum',
                                         '$txt_length',
                                         '$txt_religion',
+                                        '$txt_national',
                                         '$ddl_gender', 
+                                        '$txt_skills', 
                                         '$txt_igpit', 
                                         '$txt_phno', 
                                         '$ddl_eattain', 
                                         '$ddl_hos',
                                         '$ddl_los', 
+                                        '$ddl_dtype', 
                                         '$txt_water', 
                                         '$txt_lightning', 
                                         '$txt_toilet', 
                                         '$txt_faddress', 
+                                        '$txt_remarks', 
                                         '$txt_image',
-                                        '$senior_citizen',
-                                        '$four_ps_member'
+                                        '$txt_uname', 
+                                        '$txt_upass'
                                     )"
-    )
-      or die('Error: ' . mysqli_error($con));
-  }
+      )
+        or die('Error: ' . mysqli_error($con));
+    }
 
 
-  if ($query == true) {
-    $_SESSION['added'] = 1;
+    if ($query == true) {
+      $_SESSION['added'] = 1;
+      header("location: " . $_SERVER['REQUEST_URI']);
+    }
+  } else {
+    $_SESSION['duplicateuser'] = 1;
     header("location: " . $_SERVER['REQUEST_URI']);
   }
 }
@@ -242,10 +267,10 @@ if (isset($_POST['btn_save'])) {
 
   $txt_edit_brgy = $_POST['txt_edit_brgy'];
   $txt_edit_dperson = $_POST['txt_edit_dperson'];
-  // $txt_edit_mstatus = $_POST['txt_edit_mstatus'];
+  $txt_edit_mstatus = $_POST['txt_edit_mstatus'];
   $txt_edit_zone = $_POST['txt_edit_zone'];
   $txt_edit_householdmem = $_POST['txt_edit_householdmem'];
-  // $txt_edit_rthead = $_POST['txt_edit_rthead'];
+  $txt_edit_rthead = $_POST['txt_edit_rthead'];
 
   $txt_edit_btype = $_POST['txt_edit_btype'];
   $txt_edit_cstatus = $_POST['txt_edit_cstatus'];
@@ -254,26 +279,26 @@ if (isset($_POST['btn_save'])) {
 
 
   $txt_edit_householdnum = $_POST['txt_edit_householdnum'];
-  // $txt_edit_length = $_POST['txt_edit_length'];
+  $txt_edit_length = $_POST['txt_edit_length'];
   $txt_edit_religion = $_POST['txt_edit_religion'];
-  // $txt_edit_national = $_POST['txt_edit_national'];
+  $txt_edit_national = $_POST['txt_edit_national'];
   $ddl_edit_gender = $_POST['ddl_edit_gender'];
-  // $txt_edit_skills = $_POST['txt_edit_skills'];
+  $txt_edit_skills = $_POST['txt_edit_skills'];
   $txt_edit_igpit = $_POST['txt_edit_igpit'];
   $txt_edit_phno = $_POST['txt_edit_phno'];
   $ddl_edit_eattain = $_POST['ddl_edit_eattain'];
   $ddl_edit_hos = $_POST['ddl_edit_hos'];
 
   $ddl_edit_los = $_POST['ddl_edit_los'];
-  // $ddl_edit_dtype = $_POST['ddl_edit_dtype'];
+  $ddl_edit_dtype = $_POST['ddl_edit_dtype'];
   $txt_edit_water = $_POST['txt_edit_water'];
   $txt_edit_lightning = $_POST['txt_edit_lightning'];
   $txt_edit_toilet = $_POST['txt_edit_toilet'];
-  // $txt_edit_faddress = $_POST['txt_edit_faddress'];
+  $txt_edit_faddress = $_POST['txt_edit_faddress'];
 
-  // $txt_edit_uname = $_POST['txt_edit_uname'];
-  // $txt_edit_upass = $_POST['txt_edit_upass'];
-  // $txt_edit_remarks = $_POST['txt_edit_remarks'];
+  $txt_edit_uname = $_POST['txt_edit_uname'];
+  $txt_edit_upass = $_POST['txt_edit_upass'];
+  $txt_edit_remarks = $_POST['txt_edit_remarks'];
 
   $name = basename($_FILES['txt_edit_image']['name']);
   $temp = $_FILES['txt_edit_image']['tmp_name'];
@@ -288,8 +313,7 @@ if (isset($_POST['btn_save'])) {
     $iquery = mysqli_query($con, "INSERT INTO tbllogs (user,logdate,action) values ('" . $_SESSION['role'] . "', NOW(), '" . $action . "')");
   }
 
-  // $su = mysqli_query($con, "SELECT * from tblresident");
-  $su = mysqli_query($con, "SELECT * from tblresident where  id not in (" . $txt_id . ") ");
+  $su = mysqli_query($con, "SELECT * from tblresident where username = '" . $txt_edit_uname . "' and id not in (" . $txt_id . ") ");
   $ct = mysqli_num_rows($su);
 
   if ($ct == 0) {
@@ -310,22 +334,32 @@ if (isset($_POST['btn_save'])) {
                                         zone = '" . $txt_edit_zone . "',
                                         totalhousehold = '" . $txt_edit_householdmem . "',
                                         differentlyabledperson = '" . $txt_edit_dperson . "',
+                                        relationtohead = '" . $txt_edit_rthead . "',
+                                        maritalstatus = '" . $txt_edit_mstatus . "',
                                         bloodtype = '" . $txt_edit_btype . "',
                                         civilstatus = '" . $txt_edit_cstatus . "',
                                         occupation = '" . $txt_edit_occp . "',
                                         monthlyincome = '" . $txt_edit_income . "',
                                         householdnum = '" . $txt_edit_householdnum . "',
+                                        lengthofstay = '" . $txt_edit_length . "',
                                         religion = '" . $txt_edit_religion . "',
-                                        gender = '" . $ddl_edit_gender . "', 
+                                        nationality = '" . $txt_edit_national . "',
+                                        gender = '" . $ddl_edit_gender . "',
+                                        skills = '" . $txt_edit_skills . "',
                                         igpitID = '" . $txt_edit_igpit . "',
                                         philhealthNo = '" . $txt_edit_phno . "',
                                         highestEducationalAttainment = '" . $ddl_edit_eattain . "',
                                         houseOwnershipStatus = '" . $ddl_edit_hos . "',
                                         landOwnershipStatus = '" . $ddl_edit_los . "',
+                                        dwellingtype = '" . $ddl_edit_dtype . "',
                                         waterUsage = '" . $txt_edit_water . "',
                                         lightningFacilities = '" . $txt_edit_lightning . "',
                                         sanitaryToilet = '" . $txt_edit_toilet . "',
+                                        formerAddress = '" . $txt_edit_faddress . "',
+                                        remarks = '" . $txt_edit_remarks . "',
                                         image = '" . $txt_edit_image . "',
+                                        username = '" . $txt_edit_uname . "',
+                                        password = '" . $txt_edit_upass . "'
                                         where id = '" . $txt_id . "'
                                 ") or die('Error: ' . mysqli_error($con));
         }
@@ -351,12 +385,15 @@ if (isset($_POST['btn_save'])) {
                                         totalhousehold = '" . $txt_edit_householdmem . "',
                                         differentlyabledperson = '" . $txt_edit_dperson . "',
                                         relationtohead = '" . $txt_edit_rthead . "',
+                                        maritalstatus = '" . $txt_edit_mstatus . "',
                                         bloodtype = '" . $txt_edit_btype . "',
                                         civilstatus = '" . $txt_edit_cstatus . "',
                                         occupation = '" . $txt_edit_occp . "',
                                         monthlyincome = '" . $txt_edit_income . "',
                                         householdnum = '" . $txt_edit_householdnum . "',
+                                        lengthofstay = '" . $txt_edit_length . "',
                                         religion = '" . $txt_edit_religion . "',
+                                        nationality = '" . $txt_edit_national . "',
                                         gender = '" . $ddl_edit_gender . "',
                                         skills = '" . $txt_edit_skills . "',
                                         igpitID = '" . $txt_edit_igpit . "',
@@ -364,11 +401,15 @@ if (isset($_POST['btn_save'])) {
                                         highestEducationalAttainment = '" . $ddl_edit_eattain . "',
                                         houseOwnershipStatus = '" . $ddl_edit_hos . "',
                                         landOwnershipStatus = '" . $ddl_edit_los . "',
+                                        dwellingtype = '" . $ddl_edit_dtype . "',
                                         waterUsage = '" . $txt_edit_water . "',
                                         lightningFacilities = '" . $txt_edit_lightning . "',
                                         sanitaryToilet = '" . $txt_edit_toilet . "',
                                         formerAddress = '" . $txt_edit_faddress . "',
+                                        remarks = '" . $txt_edit_remarks . "',
                                         image = '" . $txt_edit_image . "',
+                                        username = '" . $txt_edit_uname . "',
+                                        password = '" . $txt_edit_upass . "'
                                         where id = '" . $txt_id . "'
                                 ") or die('Error: ' . mysqli_error($con));
     }

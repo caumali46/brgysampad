@@ -163,6 +163,15 @@ echo '
                                 <option value="Live with Parents/Relatives">Live with Parents/Relatives</option>
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Lightning Facilities:</label>
+                        	<select name="txt_edit_lightning" class="form-control input-sm input-size">
+                                <option>' . $erow['philhealthNo'] . '</option>
+                                <option>Electric</option>
+                                <option>Lamp</option>
+                            </select>
+                        </div>
                         
                         <div class="form-group">
                             <label class="control-label">Water Usage:</label>
@@ -170,6 +179,16 @@ echo '
                                 <option>' . $erow['waterUsage'] . '</option>
                                 <option>Faucet</option>
                                 <option>Deep Well</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Sanitary Toilet:</label>
+                        	<select name="txt_edit_toilet" class="form-control input-sm input-size">
+                                <option>' . $erow['sanitaryToilet'] . '</option>
+                                <option>Water-sealed</option>
+                                <option>Antipolo</option>
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
