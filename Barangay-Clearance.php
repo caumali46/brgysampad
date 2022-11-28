@@ -1,11 +1,15 @@
 <?php
 session_start();
 ob_start();
+include "pages/connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php require_once("main/partials/head.html"); ?>
+<?php
+require_once("main/partials/head.html");
+include "main/functions/clearance-functions.php";
+?>
 
 <body>
 
@@ -15,21 +19,22 @@ ob_start();
     <form method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row title" style="text-align: center;">
-          <h1>REQUEST CLEARANCES</h1>
+          <h1> Barangay Clearance Form</h1>
+          <h5><b> Fill up the form</h5></b>
         </div>
       </div>
-      <section class="content">
-        <center>
-          <ul class=" list-unstyled">
-            <li><a class="cta-btn" href="Barangay-Clearance.php" target="_blank"> BARANGAY CLEARANCE</a></li>
-            <li><a class="cta-btn" href="Residency.php" target="_blank"> BARANGAY RESIDENCY</a></li>
-            <li><a class="cta-btn" href="Indigency.php" target="_blank"> BARANGAY INDIGENCY</a></li>
-            <li><a class="cta-btn" href="Cedula.php" target="_blank"> BARANGAY CEDULA</a></li>
-          </ul>
-        </center>
-      </section>
-
-
+      <div class="container">
+        <?php include "main/partials/clearance-form-fields.php"; ?>
+      </div>
+      <div class="container">
+        <div class="row" style="text-align: center; margin-top:1em">
+          <div class="offset-7 col-md-6">
+            <input type="button" class="btn btn-default btn-md" value="Cancel" />
+            <input type="submit" class="btn btn-primary btn-md" name="btn_add_clearance" id="btn_add" value="Submit" required />
+          </div>
+        </div>
+      </div>
+    </form>
   </section>
 
   <!-- ======= Footer ======= -->

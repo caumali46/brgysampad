@@ -9,7 +9,7 @@ $database = "zhyiiynw_db_barangay";
 
 // $username = "root";
 // $password = '';
-// $database = "db_barangay";
+//  $database = "db_barangay";
 
 $con = mysqli_connect($hostname, $username, $password, $database)
     or die(mysqli_error());

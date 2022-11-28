@@ -27,8 +27,8 @@ ob_start();
 		<section id="cta" class="cta">
 			<div class="container" data-aos="zoom-in">
 				<div class="text-center">
-					<h3 class="text-uppercase">Request for Clearance</h3>
-					<a class="cta-btn" href="clearance-application.php" target="_blank"> Register</a>
+					<h3 class="text-uppercase">Request for Clearances</h3>
+					<a class="cta-btn" href="clearance-application.php" target="_blank"> Request</a>
 				</div>
 
 			</div>
@@ -110,11 +110,11 @@ ob_start();
 						</li>
 
 						<li data-aos="fade-up" data-aos-delay="100">
-							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">how do you get your own account? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">how to get your Clearances after you request? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
 								<p>
 
-									go to the barangay or contact the secretary to create your own account so that you can access this website.
+									You can get your request in to 1 to 3 days after your reques, and  the admin will send you a message if your request is done.
 								</p>
 							</div>
 						</li>
@@ -123,7 +123,7 @@ ob_start();
 							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Can I request certificates? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									yes by logging in to this website using the account that came from the secretary. Once you have entered this website, you can request Certificates.
+									Yes by sending request on the home page bellow in the programs/activities.
 								</p>
 							</div>
 						</li>
@@ -132,7 +132,7 @@ ob_start();
 							<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Can I pay for certificates using this website? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 							<div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
 								<p>
-									yes through Gcash, you just send your payment to the Gcash of the barangay and then you can send and receive certificates proving that you have paid.
+									yes through face to face, you can go to the barangay hall and you can pay in the treasurer of the barangay the the secritary will give your request.
 								</p>
 							</div>
 						</li>
