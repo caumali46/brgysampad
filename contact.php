@@ -40,12 +40,17 @@ ob_start();
                 <h4>Email:</h4>
                 <p>Barangaysampad2023@gmail.com</p>
               </div>
-
+              <div class="email">
+                <i class="bi bi-facebook"></i>
+                <h4>Facebook page:</h4>
+                <p>https://www.facebook.com/brgy.sampad</p>
+              </div>
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p>09068398049</p>
               </div>
+
 
             </div>
 

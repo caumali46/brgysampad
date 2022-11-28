@@ -5,13 +5,13 @@ session_start(); ?>
   //   include "pages/connection.php";
 
   $hostname = "localhost";
-  $username = "zhyiiynw_admin";
-  $password = 'p@$$w0rdYPP';
-  $database = "zhyiiynw_db_barangay";
+  //$username = "zhyiiynw_admin";
+  //$password = 'p@$$w0rdYPP';
+  //$database = "zhyiiynw_db_barangay";
 
-  // $username = "root";
-  // $password = '';
-  // $database = "db_barangay";
+   $username = "root";
+   $password = '';
+   $database = "db_barangay";
 
   $con = mysqli_connect($hostname, $username, $password, $database)
     or die(mysqli_error());

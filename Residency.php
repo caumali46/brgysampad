@@ -15,21 +15,74 @@ ob_start();
     <form method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row title" style="text-align: center;">
-          <h1>REQUEST YOUR CLEARANCES YOU NEEDED</h1>
+          <h1> Barangay Clearances Form</h1>
+          <h5><b> Fill up the form</h5></b>
         </div>
       </div>
-        <section class="content">
-          <center>
-  
-          <a class="cta-btn" href="Barangay-Clearance.php" target="_blank"> BARANGAY CLEARANCE</a>
-          <a class="cta-btn" href="Residency.php" target="_blank"> BARANGAY REIDENCY</a>
-          <a class="cta-btn" href="Indigency.php" target="_blank"> BARANGAY INDIGENCY</a>
-          <a class="cta-btn" href="Cedula.php" target="_blank"> BARANGAY CEDULA</a>
-        </div>
-  </center>
-  </section>
+      <div class="container">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="box box-primary">
+              <div class="form-group">
+                <label class="control-label">Name:</label><br>
+                <div class="row">
+                  <div class="col-sm-4">
+                     <input name="txt_fname" class="form-control input-sm col-sm-4" type="text" placeholder="Firstname" required />
+                  </div>
+                  <div class="col-sm-4">
+                   <input name="txt_mname" class="form-control input-sm col-sm-4" type="text" placeholder="Middlename" required />
+                  </div>
+                  <div class="col-sm-4">
+                    <input name="txt_lname" class="form-control input-sm" type="text" placeholder="Lastname" required />
+                  </div>
+                </div>
+              </div>
+               <div class="form-group">
+                <label class="control-label">Age:</label>
+                <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required />
+              </div>
 
-     
+
+              <div class="form-group">
+                <label class="control-label">Birthdate:</label>
+                <input name="txt_bdate" class="form-control input-sm input-size" type="date" placeholder="Birthdate" required />
+              </div>
+
+             
+              <div class="form-group">
+                <label class="control-label">Purok#:</label>
+                <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Purok#" required />
+              </div>
+              <div class="form-group">
+                <label class="control-label" required>PURPOSE: </label>
+                <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Purpose" required />
+                
+                  
+                 
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--/.col (left) -->
+
+         
+
+            </div><!-- /.box -->
+          </div>
+          <!--/.col (right) -->
+        </div> <!-- /.row -->
+      </div>
+      <div class="container">
+        <div class="row" style="text-align: center; margin-top:1em">
+          <div class="offset-7 col-md-6">
+            <input type="button" class="btn btn-default btn-md" value="Cancel" />
+            <input type="submit" class="btn btn-primary btn-md" name="btn_add" id="btn_add" value="Submit" required />
+          </div>
+        </div>
+      </div>
+    </form>
   </section>
 
   <!-- ======= Footer ======= -->
