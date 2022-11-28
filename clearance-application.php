@@ -15,7 +15,7 @@ ob_start();
     <form method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row title" style="text-align: center;">
-          <h1>REQUEST YOUR CLEARANCES YOU NEEDED</h1>
+          <h1>REQUEST CLEARANCES</h1>
         </div>
       </div>
         <section class="content">

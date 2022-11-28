@@ -15,7 +15,7 @@ ob_start();
     <form method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row title" style="text-align: center;">
-          <h1> Barangay Clearances Form</h1>
+          <h1> Barangay Cedula Form</h1>
           <h5><b> Fill up the form</h5></b>
         </div>
       </div>
