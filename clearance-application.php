@@ -18,18 +18,18 @@ ob_start();
           <h1>REQUEST CLEARANCES</h1>
         </div>
       </div>
-        <section class="content">
-          <center>
-  
-          <a class="cta-btn" href="Barangay-Clearance.php" target="_blank"> BARANGAY CLEARANCE</a>
-          <a class="cta-btn" href="Residency.php" target="_blank"> BARANGAY REIDENCY</a>
-          <a class="cta-btn" href="Indigency.php" target="_blank"> BARANGAY INDIGENCY</a>
-          <a class="cta-btn" href="Cedula.php" target="_blank"> BARANGAY CEDULA</a>
-        </div>
-  </center>
-  </section>
+      <section class="content">
+        <center>
+          <ul class=" list-unstyled">
+            <li><a class="cta-btn" href="Barangay-Clearance.php" target="_blank"> BARANGAY CLEARANCE</a></li>
+            <li><a class="cta-btn" href="Residency.php" target="_blank"> BARANGAY RESIDENCY</a></li>
+            <li><a class="cta-btn" href="Indigency.php" target="_blank"> BARANGAY INDIGENCY</a></li>
+            <li><a class="cta-btn" href="Cedula.php" target="_blank"> BARANGAY CEDULA</a></li>
+          </ul>
+        </center>
+      </section>
 
-     
+
   </section>
 
   <!-- ======= Footer ======= -->

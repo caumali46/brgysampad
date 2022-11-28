@@ -20,12 +20,7 @@
 
               </div>
               <div class="col-md-6 col-sm-12">
-                <!-- <div class="form-group" style="height: 5em;">
-                                    <label class="control-label">Username:</label>
-                                    <input name="txt_uname" id="username" class="form-control input-sm input-size" type="text" placeholder="Username" required />
-                                    <label id="user_msg" style="color:#CC0000;"></label>
-                                </div>
-                                <hr> -->
+
                 <div class="form-group">
                   <label class="control-label">Name:</label><br>
                   <div class="col-sm-4">
@@ -120,11 +115,6 @@
               </div>
 
               <div class="col-md-6 col-sm-12">
-                <!-- <div class="form-group" style="height: 5em;">
-                                    <label class=" control-label">Password:</label>
-                                    <input name="txt_upass" class="form-control input-sm" type="password" placeholder="Password" required />
-                                </div>
-                                <hr> -->
                 <div class="form-group">
                   <label class="control-label" required>Sex:</label>
                   <select name="ddl_gender" class="form-control input-sm">
@@ -138,11 +128,6 @@
                   <label class="control-label">Birthplace:</label>
                   <input name="txt_bplace" class="form-control input-sm" type="text" placeholder="Birthplace" required />
                 </div>
-                <!-- 
-                                <div class="form-group">
-                                    <label class="control-label"></label>
-                                    <input name="txt_mstatus" class="form-control input-sm" type="text" placeholder="Marital Status" required />
-                                </div> -->
 
                 <div class="form-group">
                   <label class="control-label">Purok #:</label>
@@ -164,17 +149,6 @@
                   <input name="txt_income" class="form-control input-sm" type="number" min="1" placeholder="Monthly Income" required />
                 </div>
 
-                <!-- <div class="form-group">
-                  <label class="control-label">Nationality:</label>
-                  <input name="txt_national" class="form-control input-sm" type="text" placeholder="Nationality" required />
-                </div> -->
-
-                <!-- 
-                                <div class="form-group">
-                                    <label class="control-label">Skills:</label>
-                                    <input name="txt_skills" class="form-control input-sm" type="text" placeholder="Skills" required />
-                                </div> -->
-
                 <div class="form-group">
                   <label class="control-label">PhilHealth #:</label>
                   <input name="txt_phno" class="form-control input-sm" type="number" max="999999999999" min="1" placeholder="eg. 010000000001" required />
@@ -188,15 +162,6 @@
                     <option value="Live with Parents/Relatives">Live with Parents/Relatives</option>
                   </select>
                 </div>
-
-
-                <!-- <div class="form-group">
-                                    <label class="control-label" required>Dwelling Type:</label>
-                                    <select name="ddl_dtype" class="form-control input-sm">
-                                        <option value="1st Option">1st Option</option>
-                                        <option value="2nd Option">2nd Option</option>
-                                    </select>
-                                </div> -->
 
                 <div class="form-group">
                   <label class="control-label" required>Lightning Facilities:</label>
@@ -239,10 +204,6 @@
                   </select>
                 </div>
 
-                <!-- <div class="form-group">
-                                    <label class="control-label" required></label>
-                                    <input name="txt_remarks" class="form-control input-sm input-size" type="text" placeholder="" />
-                                </div> -->
               </div>
             </div>
           </div>
