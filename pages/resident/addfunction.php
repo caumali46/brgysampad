@@ -72,7 +72,6 @@ if (isset($_POST['btn_add'])) {
 
 
   if ($name != "") {
-    var_dump($name);
     if (($imagetype == "image/jpeg" || $imagetype == "image/png" || $imagetype == "image/bmp") && $size <= 2048000) {
       if (move_uploaded_file($temp, 'image/' . $image)) {
         $txt_image = $image;
@@ -151,7 +150,6 @@ if (isset($_POST['btn_add'])) {
     }
   } else {
     $txt_image = 'default.png';
-    var_dump($name);
     $query = mysqli_query(
       $con,
       "INSERT INTO tblresident (

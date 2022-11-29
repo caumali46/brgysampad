@@ -20,6 +20,7 @@ if (!isset($_SESSION['role'])) {
         .residents_options {
             display: flex;
             justify-content: center;
+            gap: 0.8em;
         }
 
         td {
