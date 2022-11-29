@@ -5,6 +5,7 @@
 if (!isset($_SESSION['role'])) {
     header("Location: ../../login.php");
 } else {
+
     ob_start();
     include('../head_css.php'); ?>
     <style>
@@ -73,7 +74,6 @@ if (!isset($_SESSION['role'])) {
                             <div class="box">
                                 <div class="box-header">
                                     <div style="padding:10px;">
-                                        residents_options
                                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addCourseModal">
                                             <i class="fa fa-user-plus" aria-hidden="true"></i>
                                             Add Residents
