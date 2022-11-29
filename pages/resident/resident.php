@@ -18,6 +18,7 @@ if (!isset($_SESSION['role'])) {
 
         .residents_options {
             display: flex;
+            justify-content: center;
         }
 
         td {

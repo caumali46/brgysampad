@@ -21,6 +21,11 @@ if (!isset($_SESSION['role'])) {
             display: none;
         }
 
+        .residents_options {
+            display: flex;
+            justify-content: center;
+        }
+
         td {
             width: 20%;
         }
@@ -101,10 +106,12 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['gender'] . '</td>
                                                         <td>' . $row['formerAddress'] . '</td>
                                                         <td>
-                                                            <form  method="post" enctype="multipart/form-data">
-                                                                <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
-                                                                <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
-                                                            </form>
+                                                            <div class="residents_options">
+                                                                <form  method="post" enctype="multipart/form-data">
+                                                                    <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
+                                                                    <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
+                                                                </form>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     ';
@@ -123,10 +130,12 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['gender'] . '</td>
                                                         <td>' . $row['formerAddress'] . '</td>
                                                         <td>
-                                                            <form  method="post" enctype="multipart/form-data">
-                                                                <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
-                                                                <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
-                                                            </form>
+                                                            <div class="residents_options">
+                                                                <form  method="post" enctype="multipart/form-data">
+                                                                    <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
+                                                                    <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
+                                                                </form>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     ';
