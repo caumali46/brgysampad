@@ -383,15 +383,46 @@ if (isset($_POST['btn_save'])) {
   }
 }
 
-if (isset($_POST['btn_delete'])) {
-  if (isset($_POST['chk_delete'])) {
-    foreach ($_POST['chk_delete'] as $value) {
-      $delete_query = mysqli_query($con, "DELETE from tblresident where id = '$value' ") or die('Error: ' . mysqli_error($con));
+// if (isset($_POST['btn_delete'])) {
+//   if (isset($_POST['chk_delete'])) {
+//     foreach ($_POST['chk_delete'] as $value) {
+//       $delete_query = mysqli_query($con, "DELETE from tblresident where id = '$value' ") or die('Error: ' . mysqli_error($con));
 
-      if ($delete_query == true) {
-        $_SESSION['delete'] = 1;
-        header("location: " . $_SERVER['REQUEST_URI']);
+//       if ($delete_query == true) {
+//         $_SESSION['delete'] = 1;
+//         header("location: " . $_SERVER['REQUEST_URI']);
+//       }
+//     }
+//   }
+// }
+
+
+if(isset($_POST['delete_resident']))
+{
+  $id_ = $_POST['resident_id'];
+  if(isset($_POST['resident_id']) )
+  {
+      $update_query = mysqli_query($con,"UPDATE tblresident set is_deleted ='1' where id = '".$id_."' ") or die('Error: ' . mysqli_error($con));
+                  
+      if($update_query == true)
+      {
+          $_SESSION['delete'] = 1;
+          header("location: ".$_SERVER['REQUEST_URI']);
       }
-    }
+  }
+}
+
+if(isset($_POST['restore_resident']))
+{
+  $id_ = $_POST['resident_id'];
+  if(isset($_POST['resident_id']) )
+  {
+      $update_query = mysqli_query($con,"UPDATE tblresident set is_deleted ='0' where id = '".$id_."' ") or die('Error: ' . mysqli_error($con));
+                  
+      if($update_query == true)
+      {
+          $_SESSION['delete'] = 1;
+          header("location: ".$_SERVER['REQUEST_URI']);
+      }
   }
 }

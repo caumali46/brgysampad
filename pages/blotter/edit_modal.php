@@ -53,7 +53,10 @@
                                 <input name="txt_edit_ccontact" class="form-control input-sm" type="number" value="'.$row['ccontact'].'"/>
                             </div> 
                         </div><br>
+                    </div>
 
+                    <div class="col-sm-12">
+                        <hr>
                         <div class="form-group">
                             <div class="col-sm-2" style="width:110px;">
                                 <label class="control-label">Complainee:</label>
@@ -102,6 +105,13 @@
                             </div>
                             <div class="col-sm-4">
                                 <input name="txt_edit_complaint" class="form-control input-sm" type="text" value="'.$row['complaint'].'"/>
+                            </div>
+
+                            <div class="col-sm-2" style="width:110px;">
+                                <label class="control-label">Witness:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input name="txt_edit_witness" class="form-control input-sm" type="text" value="'.$row['witness'].'"/>
                             </div>
 
                             <div class="col-sm-2" style="width:110px;">

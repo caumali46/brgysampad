@@ -1,11 +1,11 @@
 <!-- ========================= MODAL ======================= -->
-            <div id="addModal1" class="modal fade">
+        <div id="addModal1" class="modal fade">
             <form class="form-horizontal" method="post">
               <div class="modal-dialog modal-lg" >
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Manage Blotter</h4>
+                        <h4 class="modal-title">Add Blotter</h4>
                     </div>
                     <div class="modal-body">
                         
@@ -53,7 +53,11 @@
                                     </div> 
 
                                 </div> 
+                            </div>
+                            
 
+                            <div class="col-sm-12">
+                                <hr>
                                 <div class="form-group">
                                     <div class="col-sm-2" style="width:110px;" >
                                         <label class="control-label" required>Complainee:</label>
@@ -94,7 +98,6 @@
                                     <div class="col-sm-4" >
                                         <input name="txt_pcontact" class="form-control input-sm" type="number" placeholder="Contact #" required/>
                                     </div> 
-
                                 </div> 
 
                                 <div class="form-group">
@@ -104,7 +107,12 @@
                                     <div class="col-sm-4">
                                         <input name="txt_complaint" class="form-control input-sm" type="text" placeholder="Complaint" required/>
                                     </div>
-
+                                    <div class="col-sm-2" style="width:110px;">
+                                        <label class="control-label" required>Witness:</label>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input name="txt_witness" class="form-control input-sm" type="text" placeholder="Witness" required/>
+                                    </div>
                                     <div class="col-sm-2" style="width:110px;">
                                         <label class="control-label" required>Action:</label>
                                     </div>
