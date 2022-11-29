@@ -11,13 +11,34 @@ if (!isset($_SESSION['role'])) {
         .input-size {
             width: 418px;
         }
-        a.btn.btn-default.btn-sm  {
+
+        a.btn.btn-default.btn-sm {
             font-weight: 700;
         }
-        
+
         #table_length,
         #table_filter {
             display: none;
+        }
+
+        td {
+            width: 20%;
+        }
+
+        td:nth-child(1) {
+            width: 5%;
+        }
+
+        td:nth-child(3) {
+            width: 5%;
+        }
+
+        td:nth-child(5) {
+            width: 5%;
+        }
+
+        td:nth-child(6) {
+            width: 5%;
         }
     </style>
 
@@ -52,25 +73,25 @@ if (!isset($_SESSION['role'])) {
                             <div class="box">
                                 <div class="box-body table-responsive">
                                     <!-- <form method="post" enctype="multipart/form-data"> -->
-                                        <table id="table" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>Purok</th>
-                                                    <th>Image</th>
-                                                    <th style="width: 150px !important;">Name</th>
-                                                    <th>Age</th>
-                                                    <th>Gender</th>
-                                                    <th style="width: 70px !important;">Former Address</th>
-                                                    <th style="width: 150px !important;">Option</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                if (!isset($_SESSION['staff'])) {
-                                                    $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
-                                                    while ($row = mysqli_fetch_array($squery)) {
-                                                        echo '
+                                    <table id="table" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Purok</th>
+                                                <th>Image</th>
+                                                <th style="width: 150px !important;">Name</th>
+                                                <th>Age</th>
+                                                <th>Gender</th>
+                                                <th style="width: 70px !important;">Former Address</th>
+                                                <th style="width: 150px !important;">Option</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            if (!isset($_SESSION['staff'])) {
+                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
+                                                while ($row = mysqli_fetch_array($squery)) {
+                                                    echo '
                                                     <tr>
                                                         <td>' . $row['id'] . '</td>
                                                         <td>' . $row['zone'] . '</td>
@@ -88,12 +109,12 @@ if (!isset($_SESSION['role'])) {
                                                     </tr>
                                                     ';
 
-                                                        include "edit_modal.php";
-                                                    }
-                                                } else {
-                                                    $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
-                                                    while ($row = mysqli_fetch_array($squery)) {
-                                                        echo '
+                                                    include "edit_modal.php";
+                                                }
+                                            } else {
+                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
+                                                while ($row = mysqli_fetch_array($squery)) {
+                                                    echo '
                                                     <tr>
                                                         <td>' . $row['zone'] . '</td>
                                                         <td style="width:70px;"><image src="image/' . basename($row['image']) . '" style="width:60px;height:60px;"/></td>
@@ -110,14 +131,14 @@ if (!isset($_SESSION['role'])) {
                                                     </tr>
                                                     ';
 
-                                                        include "edit_modal.php";
-                                                    }
+                                                    include "edit_modal.php";
                                                 }
-                                                ?>
-                                            </tbody>
-                                        </table>
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
 
-                                        <!-- include "../deleteModal.php"; -->
+                                    <!-- include "../deleteModal.php"; -->
 
                                     <!-- </form> -->
                                 </div><!-- /.box-body -->
@@ -139,9 +160,8 @@ if (!isset($_SESSION['role'])) {
                         </div> <!-- /.row -->
                     </section><!-- /.content -->
                 <?php
-                    } 
-                    else {
-                    }
+                } else {
+                }
                 ?>
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
