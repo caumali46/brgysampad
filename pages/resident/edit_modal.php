@@ -21,7 +21,7 @@ echo '
                             <div class="picture">
                                 <img src="/pages/resident/image/' . $erow['image'] . '" class="picture-src" id="wizardPicturePreview" title="">
                                 <!-- <input type="file" id="wizard-picture" class=""> -->
-                                <input name="txt_edit_image" class="form-control input-sm" type="file" required id="wizard-picture" />
+                                <input name="txt_edit_image" class="form-control input-sm" type="file" id="wizard-picture" />
                             </div>
                             <h6 class="">Choose Picture</h6>
                         </div>
