@@ -5,7 +5,6 @@
 if (!isset($_SESSION['role'])) {
     header("Location: ../../login.php");
 } else {
-
     ob_start();
     include('../head_css.php'); ?>
     <style>
@@ -17,10 +16,14 @@ if (!isset($_SESSION['role'])) {
             font-weight: 700;
         }
 
+        #table_length,
+        #table_filter {
+            display: none;
+        }
+
         .residents_options {
             display: flex;
             justify-content: center;
-            gap: 0.8em;
         }
 
         td {
@@ -61,7 +64,7 @@ if (!isset($_SESSION['role'])) {
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Resident
+                        Archived Residents
                     </h1>
                 </section>
 
@@ -73,15 +76,6 @@ if (!isset($_SESSION['role'])) {
                         <div class="row">
                             <!-- left column -->
                             <div class="box">
-                                <div class="box-header">
-                                    <div style="padding:10px;">
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addCourseModal">
-                                            <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                            Add Residents
-                                        </button>
-                                        <a href="/pages/resident/archives.php" class="btn btn-default btn-sm">Archives</a>
-                                    </div>
-                                </div><!-- /.box-header -->
                                 <div class="box-body table-responsive">
                                     <!-- <form method="post" enctype="multipart/form-data"> -->
                                     <table id="table" class="table table-bordered table-striped">
@@ -100,23 +94,22 @@ if (!isset($_SESSION['role'])) {
                                         <tbody>
                                             <?php
                                             if (!isset($_SESSION['staff'])) {
-                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '1' order by zone");
+                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
                                                 while ($row = mysqli_fetch_array($squery)) {
                                                     echo '
                                                     <tr>
                                                         <td>' . $row['id'] . '</td>
                                                         <td>' . $row['zone'] . '</td>
-                                                        <td><image src="image/' . basename($row['image']) . '" style="width:60px;height:60px;"/></td>
+                                                        <td style="width:70px;"><image src="image/' . basename($row['image']) . '" style="width:60px;height:60px;"/></td>
                                                         <td>' . $row['cname'] . '</td>
                                                         <td>' . $row['age'] . '</td>
                                                         <td>' . $row['gender'] . '</td>
                                                         <td>' . $row['formerAddress'] . '</td>
                                                         <td>
                                                             <div class="residents_options">
-                                                                <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
                                                                 <form  method="post" enctype="multipart/form-data">
                                                                     <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
-                                                                    <button type="submit" name="delete_resident" class="btn btn-danger btn-sm" ><i class="fa fa-trash-o" aria-hidden="true"></i> Archive</button>
+                                                                    <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
                                                                 </form>
                                                             </div>
                                                         </td>
@@ -126,7 +119,7 @@ if (!isset($_SESSION['role'])) {
                                                     include "edit_modal.php";
                                                 }
                                             } else {
-                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident order by zone");
+                                                $squery = mysqli_query($con, "SELECT zone,id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where is_deleted != '0' order by zone");
                                                 while ($row = mysqli_fetch_array($squery)) {
                                                     echo '
                                                     <tr>
@@ -138,10 +131,9 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['formerAddress'] . '</td>
                                                         <td>
                                                             <div class="residents_options">
-                                                                <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
                                                                 <form  method="post" enctype="multipart/form-data">
                                                                     <input type="hidden" name="resident_id" value="' . $row['id'] . '" />
-                                                                    <button type="submit" name="delete_resident" class="btn btn-danger btn-sm" ><i class="fa fa-trash-o" aria-hidden="true"></i> Archive</button>
+                                                                    <button type="submit" name="restore_resident" class="btn btn-primary btn-sm" >Restore</button>
                                                                 </form>
                                                             </div>
                                                         </td>
@@ -178,63 +170,6 @@ if (!isset($_SESSION['role'])) {
                     </section><!-- /.content -->
                 <?php
                 } else {
-                ?>
-                    <section class="content">
-                        <div class="row">
-                            <!-- left column -->
-                            <div class="box">
-
-                                <div class="box-body table-responsive">
-                                    <form method="post" enctype="multipart/form-data">
-                                        <table id="table" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th style="width: 20px !important;"><input type="checkbox" name="chk_delete[]" class="cbxMain" onchange="checkMain(this)" /></th>
-                                                    <th>Image</th>
-                                                    <th>Name</th>
-                                                    <th>Age</th>
-                                                    <th>Gender</th>
-                                                    <th>Former Address</th>
-                                                    <th style="width: 40px !important;">Option</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                $squery = mysqli_query($con, "SELECT id,CONCAT(lname, ', ', fname, ' ', mname) as cname, age, gender, formerAddress, image FROM tblresident where householdnum = '" . $_GET['resident'] . "'");
-                                                while ($row = mysqli_fetch_array($squery)) {
-                                                    echo '
-                                                <tr>
-                                                    <td><input type="checkbox" name="chk_delete[]" class="chk_delete" value="' . $row['id'] . '" /></td>
-                                                    <td style="width:70px;"><image src="image/' . basename($row['image']) . '" style="width:60px;height:60px;"/></td>
-                                                    <td>' . $row['cname'] . '</td>
-                                                    <td>' . $row['age'] . '</td>
-                                                    <td>' . $row['gender'] . '</td>
-                                                    <td>' . $row['formerAddress'] . '</td>
-                                                    <td>
-                                                        <div class="residents_options">
-                                                            <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal">
-                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                ';
-
-                                                    include "edit_modal.php";
-                                                }
-                                                ?>
-                                            </tbody>
-                                        </table>
-
-                                        <?php include "../deleteModal.php"; ?>
-                                        <?php include "../duplicate_error.php"; ?>
-
-                                    </form>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div> <!-- /.row -->
-                    </section><!-- /.content -->
-                <?php
                 }
                 ?>
             </aside><!-- /.right-side -->

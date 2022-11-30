@@ -2,19 +2,17 @@
 <!DOCTYPE html>
 <html>
 
-    <?php
-    if(!isset($_SESSION['role']))
-    {
-        header("Location: ../../login.php"); 
-    }
-    else
-    {
+<?php
+if (!isset($_SESSION['role'])) {
+    header("Location: ../../login.php");
+} else {
     ob_start();
     include('../head_css.php'); ?>
+
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
-        <?php 
-        
+        <?php
+
         include "../connection.php";
         ?>
         <?php include('../header.php'); ?>
@@ -30,85 +28,91 @@
                     <h1>
                         Reports
                     </h1>
-                    
+
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
                     <div class="row">
                         <!-- left column -->
-                            <div class="box">
-                                <div class="box-header">
-                                    <div style="padding:10px;">
-                                    <form action="export.php" method="post">
-                                        <button class="btn btn-primary btn-sm" type="submit" name="export"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export</button>  
-                                    </form>
-                                    </div>                            
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                
-                                <div class="row">                     
-                                    <div class="col-md-12 col-sm-12 col-xs-12">                     
+                        <div class="box">
+                            <div class="box-header">
+                                <div style="padding:10px; display:flex;gap:1em;">
+                                    <!-- <form action="export.php" method="post">
+                                        <button class="btn btn-primary btn-sm" type="submit" name="export">
+                                            <i class="fa fa-file-excel-o" aria-hidden="true"></i> Export
+                                        </button>
+                                    </form> -->
+                                    <button class="btn btn-default btn-sm" type="button" name="print" id="print_report">
+                                        <i class="fa fa-file-excel-o" aria-hidden="true"></i> Print
+                                    </button>
+                                </div>
+                            </div><!-- /.box-header -->
+                            <div class="box-body table-responsive" id="content">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                Resident Income Level
-                                            </div>
-                                            <div class="panel-body">
-                                                <div id="morris-bar-chart4"></div>
-                                            </div>
-                                        </div>          
-                                    </div>   
-                                    <div class="col-md-6 col-sm-12 col-xs-12">                     
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                               Resident Educational Attainment
+                                                Resident Educational Attainment
                                             </div>
                                             <div class="panel-body">
                                                 <div id="morris-donut-chart"></div>
                                             </div>
-                                        </div>            
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12">                     
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                               Population per Zone
+                                                All Senior Citizens Residents
                                             </div>
                                             <div class="panel-body">
-                                                <div id="morris-bar-chart3"></div>
+                                                <?php include "./SeniorCitizens.php"; ?>
                                             </div>
-                                        </div>            
+                                        </div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">                     
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Age
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                All 4P's member Residents
+                                            </div>
+                                            <div class="panel-body">
+                                                <?php include "./ForPsResidents.php"; ?>
+                                            </div>
                                         </div>
-                                        <div class="panel-body">
-                                            <div id="morris-bar-chart2"></div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                All Residents
+                                            </div>
+                                            <div class="panel-body">
+                                                <?php include "./AllResidents.php"; ?>
+                                            </div>
                                         </div>
-                                    </div>            
-                                </div> 
-
-
+                                    </div>
                                 </div><!-- /.box-body -->
                             </div><!-- /.box -->
-
-                            
-
-
-                    </div>   <!-- /.row -->
+                        </div> <!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
         <!-- jQuery 2.0.2 -->
-        <?php }
-        include "../footer.php"; 
+    <?php }
+include "../footer.php";
 
-        include "donut-chart.php";
-        include "bar-chart.php"; 
-        ?>
+include "donut-chart.php";
+// include "bar-chart.php";
+    ?>
 
-
+    <script>
+        $(document).ready(function() {
+            $('#print_report').click(function() {
+                window.print();
+            });
+        });
+    </script>
 
     </body>
+
 </html>

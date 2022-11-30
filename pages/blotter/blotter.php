@@ -8,7 +8,15 @@ if (!isset($_SESSION['role'])) {
 } else {
     ob_start();
     include('../head_css.php'); ?>
-    <?php include "function.php"; ?>
+
+    <style>
+        .form-group {
+            margin-bottom: inherit;
+        }
+        .form-group .col-sm-4 {
+            margin-bottom: 1em;
+        }
+    </style>
 
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
@@ -27,9 +35,8 @@ if (!isset($_SESSION['role'])) {
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blotter
+                        Manage Blotter
                     </h1>
-
                 </section>
 
                 <!-- Main content -->
@@ -130,6 +137,8 @@ if (!isset($_SESSION['role'])) {
                         <?php include "../added_notif.php"; ?>
 
                         <?php include "../delete_notif.php"; ?>
+
+                        <?php include "./function.php"; ?>
 
                     </div> <!-- /.row -->
                 </section><!-- /.content -->
