@@ -93,7 +93,7 @@ if (!isset($_SESSION['role'])) {
                                                 <th style="width: 150px !important;">Name</th>
                                                 <th>Age</th>
                                                 <th>Gender</th>
-                                                <th style="width: 70px !important;">Former Address</th>
+                                                <th style="width: 70px !important;">Address</th>
                                                 <th style="width: 150px !important;">Option</th>
                                             </tr>
                                         </thead>
