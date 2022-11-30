@@ -8,6 +8,17 @@ if (!isset($_SESSION['role'])) {
 } else {
   ob_start();
   include('../head_css.php'); ?>
+  <style>
+    .bg-green-defined {
+      background-color: #8fc04e;
+    }
+
+    .info-box-text,
+    .info-box-number {
+      color: #fff;
+      font-size: 1.2em;
+    }
+  </style>
 
   <body class="skin-black">
     <!-- header logo: style can be found in header.less -->
@@ -38,8 +49,8 @@ if (!isset($_SESSION['role'])) {
             <div class="box">
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
-                  <a href="../household/household.php"><span class="info-box-icon bg-aqua"><i class="fa fa-home"></i></span></a>
+                <div class="info-box bg-green-defined">
+                  <a href="../household/household.php"><span class="info-box-icon bg-green-defined"><i class="fa fa-home"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total Household</span>
@@ -57,8 +68,8 @@ if (!isset($_SESSION['role'])) {
               </div>
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
-                  <a href="../resident/resident.php"><span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span></a>
+                <div class="info-box bg-green-defined">
+                  <a href="../resident/resident.php"><span class="info-box-icon bg-green-defined"><i class="fa fa-users"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total Resident</span>
@@ -76,7 +87,7 @@ if (!isset($_SESSION['role'])) {
               </div>
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
+                <div class="info-box bg-green-defined">
                   <a href="../clearance/clearance.php"><span class="info-box-icon"><i class="fa fa-file"></i></span></a>
 
                   <div class="info-box-content">
@@ -95,8 +106,8 @@ if (!isset($_SESSION['role'])) {
               </div>
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
-                  <a href="../blotter/blotter.php"><span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span></a>
+                <div class="info-box bg-green-defined">
+                  <a href="../blotter/blotter.php"><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total Blotter</span>
@@ -113,8 +124,8 @@ if (!isset($_SESSION['role'])) {
                 <!-- /.info-box -->
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
-                  <a href=".."><span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span></a>
+                <div class="info-box bg-green-defined">
+                  <a href=".."><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total 4P's</span>
@@ -133,8 +144,8 @@ if (!isset($_SESSION['role'])) {
               </div>
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
-                <div class="info-box bg-aqua">
-                  <a href=".."><span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span></a>
+                <div class="info-box bg-green-defined">
+                  <a href=".."><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total Senior Citezen</span>
