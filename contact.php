@@ -7,6 +7,87 @@ ob_start();
 
 <?php require_once("main/partials/head.html"); ?>
 
+<style>
+  .contact .php-email-form_ {
+    width: 100%;
+    background: #fff;
+  }
+
+  .contact .php-email-form_ .form-group {
+    padding-bottom: 8px;
+  }
+
+  .contact .php-email-form_ .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .contact .php-email-form_ .error-message br+br {
+    margin-top: 25px;
+  }
+
+  .contact .php-email-form_ .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .contact .php-email-form_ .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .contact .php-email-form_ .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+  }
+
+  .contact .php-email-form_ input,
+  .contact .php-email-form_ textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+
+  .contact .php-email-form_ input {
+    height: 44px;
+  }
+
+  .contact .php-email-form_ textarea {
+    padding: 10px 12px;
+  }
+
+  .contact .php-email-form_ button[type=submit] {
+    background: #8fc04e;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+
+  .contact .php-email-form_ button[type=submit]:hover {
+    background: #7aa93c;
+  }
+</style>
+
 <body>
 
   <?php require_once("main/partials/navbar.php"); ?>
@@ -57,8 +138,9 @@ ob_start();
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <!-- role="form" class="php-email-form" -->
+            <!-- action="email-setup-function.php"  -->
+            <form method="post" role="form" class="php-email-form_">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -76,9 +158,14 @@ ob_start();
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <?php
+                if (isset($_SESSION['email_sent'])) {
+                  echo `<div class="sent-message">Your message has been sent. Thank you!</div>`;
+                }
+                include 'email-setup-function.php';
+                ?>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" name="submit-message">Send Message</button></div>
             </form>
 
           </div>
