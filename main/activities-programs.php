@@ -12,7 +12,7 @@
       <?php
       $squery = mysqli_query($con, "select * from tblactivity ");
       while ($row = mysqli_fetch_array($squery)) {
-        echo '<div class="col-lg-4 mb-3">
+        echo '<div class="col-lg-6 mb-3">
                 <div class="box" data-aos="fade-up">
                   <span>' . $row['activity'] . '</span>
                   <p>' . $row['description'] . '</p>

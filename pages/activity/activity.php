@@ -7,7 +7,15 @@ if (!isset($_SESSION['role'])) {
     header("Location: ../../login.php");
 } else {
     ob_start();
+
     include('../head_css.php'); ?>
+
+    <style>
+        .option {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
@@ -85,12 +93,12 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['dateofactivity'] . '</td>
                                                         <td>' . $row['activity'] . '</td>
                                                         <td>' . $row['description'] . '</td>
-                                                        <td>
+                                                        <td class="option">
                                                             <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
-                                                            <button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button>
                                                         </td>
                                                     </tr>
                                                     ';
+                                                    // <button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button>
 
                                                     include "edit_modal.php";
                                                     include "view_modal.php";
@@ -103,7 +111,7 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['dateofactivity'] . '</td>
                                                         <td>' . $row['activity'] . '</td>
                                                         <td>' . $row['description'] . '</td>
-                                                        <td><button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button></td>
+                                                        <td class="option"><button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button></td>
                                                     </tr>
                                                     ';
 
@@ -117,12 +125,12 @@ if (!isset($_SESSION['role'])) {
                                                         <td>' . $row['dateofactivity'] . '</td>
                                                         <td>' . $row['activity'] . '</td>
                                                         <td>' . $row['description'] . '</td>
-                                                        <td>
+                                                        <td class="option">
                                                             <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
-                                                            <button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button>
                                                         </td>
                                                     </tr>
                                                     ';
+                                                    // <button class="btn btn-primary btn-sm" data-target="#viewModal' . $row['id'] . '" data-toggle="modal"><i class="fa fa-search" aria-hidden="true"></i> Photo</button>
 
                                                     include "edit_modal.php";
                                                     include "view_modal.php";
