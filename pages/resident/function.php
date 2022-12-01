@@ -31,6 +31,8 @@ if (isset($_POST['btn_save'])) {
   $txt_edit_phno = $_POST['txt_edit_phno'];
   $ddl_edit_eattain = $_POST['ddl_edit_eattain'];
   $ddl_edit_hos = $_POST['ddl_edit_hos'];
+  $senior_citizen = $_POST['senior_citizen'];
+  $four_ps_member = $_POST['four_ps_member'];
 
   $ddl_edit_los = $_POST['ddl_edit_los'];
   $txt_edit_water = $_POST['txt_edit_water'];
@@ -81,7 +83,9 @@ if (isset($_POST['btn_save'])) {
                                         waterUsage = '" . $txt_edit_water . "',
                                         lightningFacilities = '" . $txt_edit_lightning . "',
                                         sanitaryToilet = '" . $txt_edit_toilet . "',
-                                        image = '" . $txt_edit_image . "',
+                                        four_ps_member = '" . $four_ps_member . "',
+                                        senior_citizen = '" . $senior_citizen . "',
+                                        image = '" . $txt_edit_image . "'
                                         where id = '" . $txt_id . "'
                                 ") or die('Error: ' . mysqli_error($con));
       }
@@ -121,6 +125,8 @@ if (isset($_POST['btn_save'])) {
                                 waterUsage = '" . $txt_edit_water . "',
                                 lightningFacilities = '" . $txt_edit_lightning . "',
                                 sanitaryToilet = '" . $txt_edit_toilet . "',
+                                four_ps_member = '" . $four_ps_member . "',
+                                senior_citizen = '" . $senior_citizen . "',
                                 image = '" . $txt_edit_image . "'
                                 where id = '" . $txt_id . "'
                         ") or die('Error: ' . mysqli_error($con));

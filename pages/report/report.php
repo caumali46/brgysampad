@@ -53,7 +53,7 @@ if (!isset($_SESSION['role'])) {
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                Resident Educational Attainment
+                                                Total Residents
                                             </div>
                                             <div class="panel-body">
                                                 <div id="morris-donut-chart"></div>

@@ -105,6 +105,25 @@ echo '
                                 <option>Care Taker</option>
                             </select>
                         </div>
+
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="senior_citizen" value="' . $erow['senior_citizen'] . '" id="senior_citizen" ';
+echo ($erow['senior_citizen'] == 1 ? "checked" : '');
+echo '>
+                            <label class="form-check-label" for="senior_citizen">
+                              Senior Citizen
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="four_ps_member" value="' . $erow['four_ps_member'] . '" id="four_ps_member"';
+echo ($erow['senior_citizen'] == 1 ? "checked" : '');
+echo '>
+                            <label class="form-check-label" for="four_ps_member">
+                              4Ps member
+                            </label>
+                          </div>
+                        </div>
                     </div>
 
                     <div class="col-md-6 col-sm-12">                   

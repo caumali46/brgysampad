@@ -102,7 +102,7 @@ if (!$con) {
         $_SESSION['username'] = $row['username'];
       }
 
-      header("Location: pages/officials/officials.php");
+      header("Location: pages/dashboard/dashboard.php");
       exit;
     } elseif ($numrow_zone > 0) {
 
