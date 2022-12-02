@@ -92,7 +92,7 @@
 
       <div class="form-group">
         <label class="control-label">Occupation:</label>
-        <input name="txt_occp" class="form-control input-sm" type="text" placeholder="Occupation" required />
+        <input name="txt_occp" class="form-control input-sm" type="text" placeholder="Occupation" />
       </div>
 
       <div class="form-group">
