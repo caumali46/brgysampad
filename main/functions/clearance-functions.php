@@ -17,7 +17,6 @@ if (isset($_POST['btn_add_clearance'])) {
   $txt_btype = $_POST['txt_btype'];
   $txt_cstatus = $_POST['txt_cstatus'];
   $txt_occp = $_POST['txt_occp'];
-  $txt_householdnum = $_POST['txt_householdnum'];
   $txt_igpit = $_POST['txt_igpit'];
   $txt_phno = $_POST['txt_phno'];
   $ddl_eattain = $_POST['ddl_eattain'];
@@ -37,7 +36,6 @@ if (isset($_POST['btn_add_clearance'])) {
                                         bplace,
                                         age,
                                         zone,
-                                        totalhousehold,
                                         bloodtype,
                                         civilstatus,
                                         occupation,
@@ -58,7 +56,6 @@ if (isset($_POST['btn_add_clearance'])) {
                                         '$txt_bplace',
                                         '$txt_age',
                                         '$txt_zone',
-                                        '$txt_householdmem',
                                         '$txt_btype',
                                         '$txt_cstatus',
                                         '$txt_occp',
