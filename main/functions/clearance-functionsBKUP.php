@@ -12,15 +12,27 @@ if (isset($_POST['btn_add_clearance'])) {
   $diff = date_diff(date_create($dateOfBirth), date_create($today));
   $txt_age = $diff->format('%y');
 
+  $txt_brgy = $_POST['txt_brgy'];
+  $txt_dperson = $_POST['txt_dperson'];
   $txt_zone = $_POST['txt_zone'];
+  $txt_householdmem = $_POST['txt_householdmem'];
 
   $txt_btype = $_POST['txt_btype'];
   $txt_cstatus = $_POST['txt_cstatus'];
   $txt_occp = $_POST['txt_occp'];
+  $txt_income = $_POST['txt_income'];
   $txt_householdnum = $_POST['txt_householdnum'];
+  $txt_length = $_POST['txt_length'];
+  $txt_religion = $_POST['txt_religion'];
   $txt_igpit = $_POST['txt_igpit'];
   $txt_phno = $_POST['txt_phno'];
   $ddl_eattain = $_POST['ddl_eattain'];
+  $ddl_hos = $_POST['ddl_hos'];
+
+  $ddl_los = $_POST['ddl_los'];
+  $txt_water = $_POST['txt_water'];
+  $txt_lightning = $_POST['txt_lightning'];
+  $txt_toilet = $_POST['txt_toilet'];
   $txt_faddress = $_POST['txt_faddress'];
 
   $senior_citizen = isset($_POST['senior_citizen']) ? $_POST['senior_citizen'] : 0;
@@ -36,15 +48,26 @@ if (isset($_POST['btn_add_clearance'])) {
                                         bdate,
                                         bplace,
                                         age,
+                                        barangay,
                                         zone,
                                         totalhousehold,
+                                        differentlyabledperson,
                                         bloodtype,
                                         civilstatus,
                                         occupation,
+                                        monthlyincome,
+                                        householdnum,
+                                        lengthofstay,
+                                        religion,
                                         gender,
                                         igpitID,
                                         philhealthNo,
                                         highestEducationalAttainment,
+                                        houseOwnershipStatus,
+                                        landOwnershipStatus,
+                                        waterUsage,
+                                        lightningFacilities,
+                                        sanitaryToilet,
                                         formerAddress,
                                         image,
                                         senior_citizen,
@@ -57,15 +80,26 @@ if (isset($_POST['btn_add_clearance'])) {
                                         '$txt_bdate', 
                                         '$txt_bplace',
                                         '$txt_age',
+                                        '$txt_brgy',
                                         '$txt_zone',
                                         '$txt_householdmem',
+                                        '$txt_dperson',
                                         '$txt_btype',
                                         '$txt_cstatus',
                                         '$txt_occp',
+                                        '$txt_income',
+                                        '$txt_householdnum',
+                                        '$txt_length',
+                                        '$txt_religion',
                                         '$ddl_gender', 
                                         '$txt_igpit', 
                                         '$txt_phno', 
                                         '$ddl_eattain', 
+                                        '$ddl_hos',
+                                        '$ddl_los', 
+                                        '$txt_water', 
+                                        '$txt_lightning', 
+                                        '$txt_toilet', 
                                         '$txt_faddress', 
                                         '$txt_image',
                                         '$senior_citizen',

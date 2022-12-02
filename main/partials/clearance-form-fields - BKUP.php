@@ -43,7 +43,7 @@
         <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="control-label">Barangay:</label>
         <input name="txt_brgy" class="form-control input-sm input-size" type="text" placeholder="Barangay" required />
       </div>
@@ -51,12 +51,12 @@
       <div class="form-group">
         <label class="control-label">Household #:</label>
         <input name="txt_householdnum" class="form-control input-sm input-size" type="number" min="1" placeholder="Household #" required />
-      </div> -->
-      <!-- 
+      </div>
+
       <div class="form-group">
         <label class="control-label">Differently-abled Person:</label>
         <input name="txt_dperson" class="form-control input-sm input-size" type="text" placeholder="Differently-abled Person" required />
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label class="control-label">Blood Type:</label>
@@ -68,7 +68,7 @@
         <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Civil Status" required />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="control-label">Year of Residency</label><br>
         <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Year of Residency" required />
       </div>
@@ -76,13 +76,27 @@
       <div class="form-group">
         <label class="control-label">Religion:</label>
         <input name="txt_religion" class="form-control input-sm input-size" type="text" placeholder="Religion" required />
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label class="control-label">Postal ID:</label>
         <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="e.g #1950" min="1" required />
       </div>
 
+      <div class="form-group">
+        <label class="control-label" required>Educational Attainment:</label>
+        <select name="ddl_eattain" class="form-control input-sm input-size">
+          <option>No schooling completed</option>
+          <option>Elementary</option>
+          <option>High school, undergrad</option>
+          <option>High school graduate</option>
+          <option>College, undergrad</option>
+          <option>Vocational</option>
+          <option>Bachelor’s degree</option>
+          <option>Master’s degree</option>
+          <option>Doctorate degree</option>
+        </select>
+      </div>
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="senior_citizen">
@@ -124,27 +138,27 @@
         <input name="txt_zone" class="form-control input-sm" type="text" placeholder="Purok #" required />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="control-label">Total Household Member:</label>
         <input name="txt_householdmem" class="form-control input-sm" type="number" min="1" placeholder="Total Household Member" required />
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label class="control-label">Occupation:</label>
         <input name="txt_occp" class="form-control input-sm" type="text" placeholder="Occupation" required />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="control-label">Monthly Income:</label>
         <input name="txt_income" class="form-control input-sm" type="number" min="1" placeholder="Monthly Income" required />
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label class="control-label">PhilHealth #:</label>
         <input name="txt_phno" class="form-control input-sm" type="number" max="999999999999" min="1" placeholder="eg. 010000000001" required />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="control-label" required>House Ownership Status:</label>
         <select name="ddl_hos" class="form-control input-sm">
           <option value="Own Home">Own Home</option>
@@ -159,28 +173,15 @@
           <option>Electric</option>
           <option>Lamp</option>
         </select>
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label class="control-label">Current Address:</label>
         <input name="txt_faddress" class="form-control input-sm" type="text" placeholder="Current Address" required />
       </div>
 
+
       <div class="form-group">
-        <label class="control-label" required>Educational Attainment:</label>
-        <select name="ddl_eattain" class="form-control input-sm input-size">
-          <option>No schooling completed</option>
-          <option>Elementary</option>
-          <option>High school, undergrad</option>
-          <option>High school graduate</option>
-          <option>College, undergrad</option>
-          <option>Vocational</option>
-          <option>Bachelor’s degree</option>
-          <option>Master’s degree</option>
-          <option>Doctorate degree</option>
-        </select>
-      </div>
-      <!-- <div class="form-group">
         <label class="control-label" required>Land Ownership Status:</label>
         <select name="ddl_los" class="form-control input-sm input-size">
           <option>Owned</option>
@@ -205,7 +206,7 @@
           <option>Antipolo</option>
           <option>None</option>
         </select>
-      </div> -->
+      </div>
 
     </div><!-- /.box -->
   </div>
