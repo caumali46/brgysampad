@@ -4,18 +4,6 @@
     <!-- general form elements -->
     <div class="box box-primary">
 
-      <!-- <div class="form-group">
-        <label class="control-label" required>PURPOSE: </label>
-        <select name="purpose" class="form-control input-sm input-size" type="text" placeholder="Status" required>
-          <option>Purposes</option>
-          <option>Police Clearance</option>
-          <option>Elementary</option>
-          <option>Postal ID</option>
-          <option>Meralco Application</option>
-          <option>Loan Purposes</option>
-          <option> Others</option>
-        </select>
-      </div> -->
       <div class="form-group">
         <label class="control-label" required>PURPOSE: </label>
         <input name="purpose" class="form-control input-sm input-size" type="text" placeholder="Purpose" required />
@@ -47,44 +35,19 @@
         <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required />
       </div>
 
-      <!-- <div class="form-group">
-        <label class="control-label">Barangay:</label>
-        <input name="txt_brgy" class="form-control input-sm input-size" type="text" placeholder="Barangay" required />
-      </div>
-
-      <div class="form-group">
-        <label class="control-label">Household #:</label>
-        <input name="txt_householdnum" class="form-control input-sm input-size" type="number" min="1" placeholder="Household #" required />
-      </div> -->
-      <!-- 
-      <div class="form-group">
-        <label class="control-label">Differently-abled Person:</label>
-        <input name="txt_dperson" class="form-control input-sm input-size" type="text" placeholder="Differently-abled Person" required />
-      </div> -->
-
       <div class="form-group">
         <label class="control-label">Blood Type:</label>
-        <input name="txt_btype" class="form-control input-sm input-size" type="text" placeholder="Blood Type" required />
+        <input name="txt_btype" class="form-control input-sm input-size" type="text" placeholder="Blood Type" />
       </div>
 
       <div class="form-group">
         <label class="control-label">Civil Status:</label>
-        <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Civil Status" required />
+        <input name="txt_cstatus" class="form-control input-sm input-size" type="text" placeholder="Civil Status" />
       </div>
-
-      <!-- <div class="form-group">
-        <label class="control-label">Year of Residency</label><br>
-        <input name="txt_length" class="form-control input-sm input-size" type="number" min="0" placeholder="Year of Residency" required />
-      </div>
-
-      <div class="form-group">
-        <label class="control-label">Religion:</label>
-        <input name="txt_religion" class="form-control input-sm input-size" type="text" placeholder="Religion" required />
-      </div> -->
 
       <div class="form-group">
         <label class="control-label">Postal ID:</label>
-        <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="e.g #1950" min="1" required />
+        <input name="txt_igpit" class="form-control input-sm input-size" type="number" placeholder="e.g #1950" min="1" />
       </div>
 
       <div class="form-group">
@@ -107,7 +70,6 @@
 
   <!-- right column -->
   <div class="col-md-6">
-    <!-- general form elements disabled -->
     <div class="box box-warning">
       <div class="form-group">
         <label class="control-label" required>Sex:</label>
@@ -128,42 +90,15 @@
         <input name="txt_zone" class="form-control input-sm" type="text" placeholder="Purok #" required />
       </div>
 
-      <!-- <div class="form-group">
-        <label class="control-label">Total Household Member:</label>
-        <input name="txt_householdmem" class="form-control input-sm" type="number" min="1" placeholder="Total Household Member" required />
-      </div> -->
-
       <div class="form-group">
         <label class="control-label">Occupation:</label>
         <input name="txt_occp" class="form-control input-sm" type="text" placeholder="Occupation" required />
       </div>
 
-      <!-- <div class="form-group">
-        <label class="control-label">Monthly Income:</label>
-        <input name="txt_income" class="form-control input-sm" type="number" min="1" placeholder="Monthly Income" required />
-      </div> -->
-
       <div class="form-group">
         <label class="control-label">PhilHealth #:</label>
-        <input name="txt_phno" class="form-control input-sm" type="number" max="999999999999" min="1" placeholder="eg. 010000000001" required />
+        <input name="txt_phno" class="form-control input-sm" type="number" max="999999999999" min="1" placeholder="eg. 010000000001" />
       </div>
-
-      <!-- <div class="form-group">
-        <label class="control-label" required>House Ownership Status:</label>
-        <select name="ddl_hos" class="form-control input-sm">
-          <option value="Own Home">Own Home</option>
-          <option value="Rent">Rent</option>
-          <option value="Live with Parents/Relatives">Live with Parents/Relatives</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label" required>Lightning Facilities:</label>
-        <select name="txt_lightning" class="form-control input-sm input-size">
-          <option>Electric</option>
-          <option>Lamp</option>
-        </select>
-      </div> -->
 
       <div class="form-group">
         <label class="control-label">Current Address:</label>
@@ -184,32 +119,6 @@
           <option>Doctorate degree</option>
         </select>
       </div>
-      <!-- <div class="form-group">
-        <label class="control-label" required>Land Ownership Status:</label>
-        <select name="ddl_los" class="form-control input-sm input-size">
-          <option>Owned</option>
-          <option>Landless</option>
-          <option>Tenant</option>
-          <option>Care Taker</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label" required>Water Usage:</label>
-        <select name="txt_water" class="form-control input-sm input-size">
-          <option>Faucet</option>
-          <option>Deep Well</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label" required>Sanitary Toilet:</label>
-        <select name="txt_toilet" class="form-control input-sm input-size">
-          <option>Water-sealed</option>
-          <option>Antipolo</option>
-          <option>None</option>
-        </select>
-      </div> -->
 
     </div><!-- /.box -->
   </div>
