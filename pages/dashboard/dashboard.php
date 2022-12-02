@@ -125,7 +125,7 @@ if (!isset($_SESSION['role'])) {
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
                 <div class="info-box bg-green-defined">
-                  <a href=".."><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
+                  <a href="../report/report.php#four_ps"><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total 4P's</span>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['role'])) {
 
               <div class="col-md-3 col-sm-6 col-xs-12"><br>
                 <div class="info-box bg-green-defined">
-                  <a href=".."><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
+                  <a href="../report/report.php#senior_citizens"><span class="info-box-icon bg-green-defined"><i class="fa fa-user"></i></span></a>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Total Senior Citezen</span>

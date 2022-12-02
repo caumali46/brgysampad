@@ -61,7 +61,7 @@ if (!isset($_SESSION['role'])) {
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="senior_citizens">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 All Senior Citizens Residents
@@ -71,7 +71,7 @@ if (!isset($_SESSION['role'])) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="four_ps">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 All 4P's member Residents
@@ -81,7 +81,7 @@ if (!isset($_SESSION['role'])) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="residents">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 All Residents

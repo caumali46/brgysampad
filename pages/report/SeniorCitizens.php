@@ -1,5 +1,5 @@
 <section class="content">
-  <div class="row">
+  <div class=" row">
     <!-- left column -->
     <div class="box">
       <div class="box-body table-responsive">
