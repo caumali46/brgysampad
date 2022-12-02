@@ -1,5 +1,9 @@
 <?php
+
+
+$_SESSION['added'] = 0;
 if (isset($_POST['btn_add_clearance'])) {
+
   $txt_lname = $_POST['txt_lname'];
   $txt_fname = $_POST['txt_fname'];
   $txt_mname = $_POST['txt_mname'];

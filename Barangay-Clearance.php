@@ -19,6 +19,14 @@ include "main/functions/clearance-functions.php";
     <form method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row title" style="text-align: center;">
+          <?php
+          if (isset($_SESSION['added']) && $_SESSION['added'] == 1) {
+            echo
+            '<div class="alert alert-success" role="alert">
+              Your clearance request is successfully submitted!
+            </div>';
+          }
+          ?>
           <h1> Barangay Clearance Form</h1>
           <h5><b> Fill up the form</h5></b>
         </div>

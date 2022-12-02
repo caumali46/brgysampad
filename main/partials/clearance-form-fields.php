@@ -4,7 +4,7 @@
     <!-- general form elements -->
     <div class="box box-primary">
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label class="control-label" required>PURPOSE: </label>
         <select name="purpose" class="form-control input-sm input-size" type="text" placeholder="Status" required>
           <option>Purposes</option>
@@ -14,9 +14,13 @@
           <option>Meralco Application</option>
           <option>Loan Purposes</option>
           <option> Others</option>
-
         </select>
+      </div> -->
+      <div class="form-group">
+        <label class="control-label" required>PURPOSE: </label>
+        <input name="purpose" class="form-control input-sm input-size" type="text" placeholder="Purpose" required />
       </div>
+
       <div class="form-group">
         <label class="control-label">Name:</label><br>
         <div class="row">
