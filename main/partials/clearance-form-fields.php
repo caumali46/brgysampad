@@ -109,6 +109,7 @@
         <label class="control-label" required>Educational Attainment:</label>
         <select name="ddl_eattain" class="form-control input-sm input-size">
           <option>No schooling completed</option>
+          <!-- comment -->
           <option>Elementary</option>
           <option>High school, undergrad</option>
           <option>High school graduate</option>
