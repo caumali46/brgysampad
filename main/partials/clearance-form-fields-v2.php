@@ -31,7 +31,12 @@
 
       <div class="form-group">
         <label class="control-label">Contact:</label>
-        <input name="txt_age" class="form-control input-sm input-size" type="number" placeholder="Age" required />
+        <input name="txt_contact" class="form-control input-sm input-size" type="number" placeholder="Contact" required />
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Email:</label>
+        <input name="txt_email" class="form-control input-sm input-size" type="email" placeholder="Email" required />
       </div>
 
       <div class="form-group">
