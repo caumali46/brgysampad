@@ -169,7 +169,9 @@ ob_start();
 
 	</main><!-- End #main -->
 
+
 	<!-- ======= Footer ======= -->
+
 	<?php require_once("main/partials/footer.html"); ?>
 </body>
 

@@ -11,13 +11,17 @@
     <div class="row">
       <?php
       $squery = mysqli_query($con, "select * from tblactivity ");
+      $index = 0;
       while ($row = mysqli_fetch_array($squery)) {
         echo '<div class="col-lg-6 mb-3">
                 <div class="box" data-aos="fade-up">
-                  <span>' . $row['activity'] . '</span>
-                  <p>' . $row['description'] . '</p>
+                  <p class="d-block" tabindex="0" data-toggle="tooltip" title="Click to read more">
+                    <span  data-bs-toggle="collapse" data-bs-target="#collapseExample' . $index . '">' . $row['activity'] . '</span>
+                  </p>
+                  <p class="collapse" id="collapseExample' . $index . '">' . $row['description'] . '</p>
                 </div>
               </div>';
+        $index++;
       }
       ?>
     </div>
