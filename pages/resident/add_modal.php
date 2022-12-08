@@ -85,20 +85,6 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" required>Educational Attainment:</label>
-                  <select name="ddl_eattain" class="form-control input-sm input-size">
-                    <option>No schooling completed</option>
-                    <option>Elementary</option>
-                    <option>High school, undergrad</option>
-                    <option>High school graduate</option>
-                    <option>College, undergrad</option>
-                    <option>Vocational</option>
-                    <option>Bachelor’s degree</option>
-                    <option>Master’s degree</option>
-                    <option>Doctorate degree</option>
-                  </select>
-                </div>
-                <div class="form-group">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="senior_citizen" value="0" id="senior_citizen">
                     <label class="form-check-label" for="senior_citizen">
@@ -164,14 +150,6 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" required>Lightning Facilities:</label>
-                  <select name="txt_lightning" class="form-control input-sm input-size">
-                    <option>Electric</option>
-                    <option>Lamp</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
                   <label class="control-label">Current Address:</label>
                   <input name="txt_faddress" class="form-control input-sm" type="text" placeholder="Current Address" required />
                 </div>
@@ -188,19 +166,17 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" required>Water Usage:</label>
-                  <select name="txt_water" class="form-control input-sm input-size">
-                    <option>Faucet</option>
-                    <option>Deep Well</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label" required>Sanitary Toilet:</label>
-                  <select name="txt_toilet" class="form-control input-sm input-size">
-                    <option>Water-sealed</option>
-                    <option>Antipolo</option>
-                    <option>None</option>
+                  <label class="control-label" required>Educational Attainment:</label>
+                  <select name="ddl_eattain" class="form-control input-sm input-size">
+                    <option>No schooling completed</option>
+                    <option>Elementary</option>
+                    <option>High school, undergrad</option>
+                    <option>High school graduate</option>
+                    <option>College, undergrad</option>
+                    <option>Vocational</option>
+                    <option>Bachelor’s degree</option>
+                    <option>Master’s degree</option>
+                    <option>Doctorate degree</option>
                   </select>
                 </div>
 

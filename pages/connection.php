@@ -3,6 +3,7 @@
 // Establishing Connection with Server by passing inputs as a parameter
 
 $hostname = "localhost";
+
 $username = "zhyiiynw_admin";
 $password = 'p@$$w0rdYPP';
 $database = "zhyiiynw_db_barangay";

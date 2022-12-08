@@ -79,21 +79,6 @@ echo '
                             <input name="txt_edit_igpit" class="form-control input-sm" type="number" value="' . $erow['igpitID'] . '" min="1" />
                         </div>
 
-                        <div class="form-group">
-                            <label class="control-label">Educational Attainment:</label>
-                            <select name="ddl_edit_eattain" class="form-control input-sm">
-                                <option selected>' . $erow['highestEducationalAttainment'] . '</option>
-                                <option>No schooling completed</option>
-                                <option>Elementary</option>
-                                <option>High school, undergrad</option>
-                                <option>High school graduate</option>
-                                <option>College, undergrad</option>
-                                <option>Vocational</option>
-                                <option>Bachelor’s degree</option>
-                                <option>Master’s degree</option>
-                                <option>Doctorate degree</option>
-                            </select>
-                        </div>
 
                         <div class="form-group">
                             <label class="control-label">Land Ownership Status:</label>
@@ -184,32 +169,21 @@ echo '>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label">Lightning Facilities:</label>
-                        	<select name="txt_edit_lightning" class="form-control input-sm input-size">
-                                <option>' . $erow['philhealthNo'] . '</option>
-                                <option>Electric</option>
-                                <option>Lamp</option>
+                            <label class="control-label">Educational Attainment:</label>
+                            <select name="ddl_edit_eattain" class="form-control input-sm">
+                                <option selected>' . $erow['highestEducationalAttainment'] . '</option>
+                                <option>No schooling completed</option>
+                                <option>Elementary</option>
+                                <option>High school, undergrad</option>
+                                <option>High school graduate</option>
+                                <option>College, undergrad</option>
+                                <option>Vocational</option>
+                                <option>Bachelor’s degree</option>
+                                <option>Master’s degree</option>
+                                <option>Doctorate degree</option>
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label class="control-label">Water Usage:</label>
-                        	<select name="txt_edit_water" class="form-control input-sm input-size">
-                                <option>' . $erow['waterUsage'] . '</option>
-                                <option>Faucet</option>
-                                <option>Deep Well</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Sanitary Toilet:</label>
-                        	<select name="txt_edit_toilet" class="form-control input-sm input-size">
-                                <option>' . $erow['sanitaryToilet'] . '</option>
-                                <option>Water-sealed</option>
-                                <option>Antipolo</option>
-                                <option>None</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
         </div>

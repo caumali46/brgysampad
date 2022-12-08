@@ -28,7 +28,7 @@ ob_start();
 			<div class="container" data-aos="zoom-in">
 				<div class="text-center">
 					<h3 class="text-uppercase">Request for Clearances</h3>
-					<a class="cta-btn" href="clearance-application.php" target="_blank"> Request</a>
+					<a class="cta-btn" href="clearance.php" target="_blank"> Request</a>
 				</div>
 
 			</div>
@@ -114,7 +114,7 @@ ob_start();
 							<div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
 								<p>
 
-									You can get your request in to 1 to 3 days after your reques, and  the admin will send you a message if your request is done.
+									You can get your request in to 1 to 3 days after your reques, and the admin will send you a message if your request is done.
 								</p>
 							</div>
 						</li>

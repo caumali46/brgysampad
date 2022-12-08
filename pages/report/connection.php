@@ -8,6 +8,7 @@
 // 			date_default_timezone_set("Asia/Manila");
 
 $hostname = "localhost";
+
 $username = "zhyiiynw_admin";
 $password = 'p@$$w0rdYPP';
 $database = "zhyiiynw_db_barangay";
