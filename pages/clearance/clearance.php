@@ -108,7 +108,7 @@ if (!isset($_SESSION['role'])) {
                                                         <?php
                                                         if (!isset($_SESSION['admin'])) {
 
-                                                            $squery = mysqli_query($con, "SELECT *,CONCAT(r.lname, ', ' ,r.fname, ' ' ,r.mname) as residentname,p.id as pid FROM tblclearance p left join tblresident r on r.id = p.residentid  where status = 'Approved'") or die('Error: ' . mysqli_error($con));
+                                                            $squery = mysqli_query($con, "SELECT *,CONCAT(r.lname, ', ' ,r.fname, ' ' ,r.mname) as residentname,p.id as pid FROM tblclearance p left join tblresident r on r.id = p.residentid  where status IS NULL") or die('Error: ' . mysqli_error($con));
                                                             while ($row = mysqli_fetch_array($squery)) {
                                                                 echo '
                                                                     <tr>
@@ -121,9 +121,6 @@ if (!isset($_SESSION['role'])) {
                                                                         <td>' . $row['orNo'] . '</td>
                                                                         <td>₱ ' . number_format($row['samount'], 2) . '</td>
                                                                         <td>
-                                                                            <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['pid'] . '" data-toggle="modal">
-                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
-                                                                            </button>
                                                                             <button class="btn btn-success btn-sm" data-target="#approveModal' . $row['pid'] . '" data-toggle="modal"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Approve</button>
                                                                             <button class="btn btn-danger btn-sm" data-target="#disapproveModal' . $row['pid'] . '" data-toggle="modal"><i class="fa fa-thumbs-down" aria-hidden="true"></i> Disapprove</button>
                                                                         </td>
@@ -138,7 +135,9 @@ if (!isset($_SESSION['role'])) {
                                                 </table>
 
                                             </div>
-
+                                            <!-- <button class="btn btn-primary btn-sm" data-target="#editModal' . $row['pid'] . '" data-toggle="modal">
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                                            </button> -->
                                             <div id="approved" class="tab-pane">
                                                 <table id="table" class="table table-bordered table-striped">
                                                     <thead>
@@ -177,7 +176,7 @@ if (!isset($_SESSION['role'])) {
                                                                 <td>' . $row['purpose'] . '</td>
                                                                 <td>' . $row['orNo'] . '</td>
                                                                 <td>₱ ' . number_format($row['samount'], 2) . '</td>
-                                                                <td><button class="btn btn-success btn-sm" type="button"> Approved</button></td>
+                                                                <td><a href="/pages/clearance/print.php?id=' . $row['clearanceNo'] . '" class="btn btn-primary btn-sm">Print</a><button class="btn btn-success btn-sm" type="button"> Approved</button></td>
                                                             </tr>';
                                                             }
                                                         }

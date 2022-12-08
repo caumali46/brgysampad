@@ -10,15 +10,19 @@
 
     <div class="row">
       <?php
-      $squery = mysqli_query($con, "select * from tblactivity ");
+      $squery = mysqli_query($con, "select * from tblactivity ORDER BY dateofactivity DESC ");
       $index = 0;
       while ($row = mysqli_fetch_array($squery)) {
         echo '<div class="col-lg-6 mb-3">
                 <div class="box" data-aos="fade-up">
-                  <p class="d-block" tabindex="0" data-toggle="tooltip" title="Click to read more">
-                    <span  data-bs-toggle="collapse" data-bs-target="#collapseExample' . $index . '">' . $row['activity'] . '</span>
+                  <p class="title"  data-bs-toggle="collapse" data-bs-target="#collapseExample' . $index . '" data-toggle="tooltip" title="Click to read more">
+                    <span >' . $row['activity'] . '</span>
+                    <a>Posted on: ' . date("F j, Y", strtotime($row['created_at'])) . ' </a>
                   </p>
-                  <p class="collapse" id="collapseExample' . $index . '">' . $row['description'] . '</p>
+                  <p class="collapse mt-3" id="collapseExample' . $index . '">'
+          . $row['description'] . '<br/><br/>
+                    <a>Date of Activity: <b>' . date("F j, Y", strtotime($row['dateofactivity'])) . '</b></a>
+                  </p> 
                 </div>
               </div>';
         $index++;
