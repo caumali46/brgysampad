@@ -15,6 +15,8 @@ if (isset($_POST['btn_add'])) {
     $ddl_acttaken = $_POST['ddl_acttaken'];
     $ddl_stat = $_POST['ddl_stat'];
     $txt_location = $_POST['txt_location'];
+    $scope = $_POST['scope'];
+
     $year = date('Y');
     $date = date('Y-m-d');
 
@@ -23,8 +25,8 @@ if (isset($_POST['btn_add'])) {
         $iquery = mysqli_query($con, "INSERT INTO tbllogs (user,logdate,action) values ('" . $_SESSION['role'] . "', NOW(), '" . $action . "')");
     }
 
-    $query = mysqli_query($con, "INSERT INTO tblblotter (yearRecorded,dateRecorded,complainant,cage,caddress,ccontact,personToComplain,page,paddress,pcontact,complaint,witness,actionTaken,sStatus,locationOfIncidence,recordedby) 
-        values ('$year', '$date', '$txt_cname', '$txt_cage', '$txt_cadd', '$txt_ccontact', '$txt_pname', '$txt_page', '$txt_padd', '$txt_pcontact', '$txt_complaint', '$txt_witness', '$ddl_acttaken', '$ddl_stat', '$txt_location', '" . $_SESSION['username'] . "')") or die('Error: ' . mysqli_error($con));
+    $query = mysqli_query($con, "INSERT INTO tblblotter (yearRecorded,dateRecorded,complainant,cage,caddress,ccontact,personToComplain,page,paddress,pcontact,complaint,witness,actionTaken,sStatus,locationOfIncidence,scope,recordedby) 
+        values ('$year', '$date', '$txt_cname', '$txt_cage', '$txt_cadd', '$txt_ccontact', '$txt_pname', '$txt_page', '$txt_padd', '$txt_pcontact', '$txt_complaint', '$txt_witness', '$ddl_acttaken', '$ddl_stat', '$txt_location', '$scope','" . $_SESSION['username'] . "')") or die('Error: ' . mysqli_error($con));
     if ($query == true) {
         $_SESSION['added'] = 1;
         header("location: " . $_SERVER['REQUEST_URI']);
